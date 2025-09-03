@@ -1,0 +1,349 @@
+.aboutUsPage {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+  background: linear-gradient(45deg, #000000 0%, #1a1a1a 100%);
+}
+
+.heroSlider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.heroSlide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: heroSlideShow 15s infinite;
+}
+
+.heroSlide:nth-child(1) { animation-delay: 0s; }
+.heroSlide:nth-child(2) { animation-delay: 5s; }
+.heroSlide:nth-child(3) { animation-delay: 10s; }
+
+@keyframes heroSlideShow {
+  0%, 33.33% { 
+    opacity: 1; 
+    z-index: 2;
+  }
+  33.34%, 100% { 
+    opacity: 0; 
+    z-index: 1;
+  }
+}
+
+.heroImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+.heroOverlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+  padding: 100px 20px;
+  border-radius: 10px;
+}
+
+.heroTitle {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 10rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  animation: fadeInUp 1.5s ease-out;
+}
+
+/* Main Content Section */
+.mainContent {
+  padding: 80px 0;
+  background: #f8f8f8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contentColumn {
+  animation: fadeInLeft 1s ease-out;
+}
+
+.contentColumn:nth-child(2) {
+  animation: fadeInRight 1s ease-out;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  margin: 0;
+}
+
+/* Location Section */
+.locationSection {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  text-align: center;
+}
+
+.locationTitle {
+  font-size: 3rem;
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 2px;
+  animation: fadeInDown 1s ease-out;
+}
+
+/* Gallery Section */
+.gallerySection {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.imageGallery {
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.gallerySlider {
+  display: flex;
+  animation: slide 15s infinite linear;
+}
+
+.gallerySlide {
+  min-width: 100%;
+  height: 500px;
+  position: relative;
+}
+
+.galleryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.galleryImage:hover {
+  transform: scale(1.05);
+}
+
+/* Values Section */
+.valuesSection {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.valueCard {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.valueCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.valueCard h3 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin: 0 0 20px 0;
+  font-weight: 700;
+}
+
+.valueCard p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Contact Section */
+.contactSection {
+  padding: 80px 0;
+  background: #2c3e50;
+  color: #ffffff;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.contactColumn h3 {
+  font-size: 1.5rem;
+  margin: 0 0 20px 0;
+  color: #ecf0f1;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+.contactColumn p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
+  color: #bdc3c7;
+}
+
+.socialLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.socialLinks a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.socialLinks a:hover {
+  color: #2980b9;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  33.33% { transform: translateX(-100%); }
+  66.66% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 4rem;
+  }
+  
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .locationTitle {
+    font-size: 2rem;
+  }
+  
+  .gallerySlide {
+    height: 300px;
+  }
+  
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .heroOverlay {
+    padding: 50px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 3rem;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .mainContent,
+  .locationSection,
+  .gallerySection,
+  .valuesSection,
+  .contactSection {
+    padding: 40px 0;
+  }
+}
