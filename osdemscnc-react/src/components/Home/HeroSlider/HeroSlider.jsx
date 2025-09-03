@@ -6,8 +6,14 @@ const HeroSlider = () => {
 
   const slides = [
     {
-      title: "Industrial automation and robotics, for manufacturing processes",
-      subtitle: "Effective Problem Solutions",
+      title: (
+        <>
+          Industrial automation and<br />
+          robotics, for manufacturing<br />
+          processes
+        </>
+      ),
+      subtitle: "Advanced Industrial Automation & Robotics",
       description: "Crafting the parts is just the beginning. Bringing them together with precision is where the true innovation happens.",
       stats: [
         { number: "Fast", label: "Query Execution" },
@@ -18,15 +24,20 @@ const HeroSlider = () => {
       theme: "light" // Fondo blanco
     },
     {
-      title: "The future is Osdems CNC",
-      subtitle: "Innovation & Quality",
-      description: "Unlock the precision of advanced CNC machining and elevate your business with cutting-edge manufacturing solutions designed for the future.",
+      title: (
+        <>
+          Engineering Tomorrow's<br />
+          Manufacturing Today
+        </>
+      ),
+      subtitle: "OSDEMS CNC - Innovation Redefined",
+      description: "Experience the convergence of precision manufacturing and intelligent automation. Our state-of-the-art CNC solutions deliver exceptional quality while setting new industry standards for efficiency and reliability.",
       stats: [
-        { number: "+45", label: "Collaborators" },
-        { number: "20+", label: "Business Partners" },
-        { number: "4.7", label: "Years of experience" }
+        { number: "45+", label: "Expert Technicians" },
+        { number: "20+", label: "Strategic Partnerships" },
+        { number: "4.7+", label: "Years of Excellence" }
       ],
-      bottomText: "Start your project's success",
+      bottomText: "Transform Your Vision Into Reality",
       theme: "teal" // Fondo teal
     }
   ];
@@ -50,10 +61,15 @@ const HeroSlider = () => {
   return (
     <section className={`${styles.hero} ${styles[slides[currentSlide].theme]}`}>
       <div className={styles.particleBackground}></div>
-      <div className={styles.geometricShapes}>
-        <div className={styles.shape1}></div>
-        <div className={styles.shape2}></div>
-        <div className={styles.shape3}></div>
+      <div className={styles.advancedParticles}>
+        <div className={styles.particle}></div>
+        <div className={styles.particle}></div>
+        <div className={styles.particle}></div>
+        <div className={styles.particle}></div>
+        <div className={styles.particle}></div>
+        <div className={styles.particle}></div>
+        <div className={styles.particle}></div>
+        <div className={styles.particle}></div>
       </div>
       
       {/* Navigation Arrows */}
