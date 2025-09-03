@@ -14,7 +14,7 @@ const Navigation = ({ items = [], className = '', isLoading = false }) => {
       dropdownItems: [
         { text: 'ABOUT US', href: '/about-us' },
         { text: 'HISTORY', href: '/history' },
-        { text: 'NEWS', href: '/news' }
+        { text: 'NEWS', href: 'https://www.manufacturingtomorrow.com/' }
       ]
     },
     { text: 'SERVICES', href: '/servicios' },
@@ -33,6 +33,18 @@ const Navigation = ({ items = [], className = '', isLoading = false }) => {
     setActiveDropdown(null);
   };
 
+  const handleExternalLink = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
+  const handleDropdownClick = (e, item) => {
+    if (item.hasDropdown) {
+      e.preventDefault();
+      // Toggle dropdown instead of navigating
+      setActiveDropdown(activeDropdown === navigationItems.indexOf(item) ? null : navigationItems.indexOf(item));
+    }
+  };
+
   if (isLoading) {
     return <div className={styles.loading}>Cargando navegación...</div>;
   }
@@ -47,25 +59,62 @@ const Navigation = ({ items = [], className = '', isLoading = false }) => {
             onMouseEnter={() => item.hasDropdown && handleMouseEnter(index)}
             onMouseLeave={() => item.hasDropdown && handleMouseLeave()}
           >
-            <a 
-              href={item.href}
-              className={`${styles.navigationLink} ${item.active ? styles.active : ''}`}
-            >
-              {item.text}
-              {item.hasDropdown && <span className={styles.dropdownArrow}> ▼</span>}
-            </a>
+            {item.external ? (
+              <button 
+                onClick={() => handleExternalLink(item.href)}
+                className={`${styles.navigationLink} ${item.active ? styles.active : ''}`}
+                style={{ 
+                  background: 'none', 
+                  border: 'none', 
+                  cursor: 'pointer',
+                  font: 'inherit',
+                  color: 'inherit',
+                  padding: 'inherit'
+                }}
+              >
+                {item.text}
+              </button>
+            ) : (
+              <a 
+                href={item.hasDropdown ? '#' : item.href}
+                className={`${styles.navigationLink} ${item.active ? styles.active : ''}`}
+                onClick={(e) => handleDropdownClick(e, item)}
+              >
+                {item.text}
+                {item.hasDropdown && <span className={styles.dropdownArrow}> ▼</span>}
+              </a>
+            )}
             
             {item.hasDropdown && item.dropdownItems && activeDropdown === index && (
               <div className={styles.dropdown}>
                 <ul className={styles.dropdownList}>
                   {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
                     <li key={dropdownIndex} className={styles.dropdownItem}>
-                      <a 
-                        href={dropdownItem.href}
-                        className={styles.dropdownLink}
-                      >
-                        {dropdownItem.text}
-                      </a>
+                      {dropdownItem.external ? (
+                        <button 
+                          onClick={() => handleExternalLink(dropdownItem.href)}
+                          className={styles.dropdownLink}
+                          style={{ 
+                            background: 'none', 
+                            border: 'none', 
+                            cursor: 'pointer',
+                            width: '100%',
+                            textAlign: 'left',
+                            padding: 0,
+                            font: 'inherit',
+                            color: 'inherit'
+                          }}
+                        >
+                          {dropdownItem.text}
+                        </button>
+                      ) : (
+                        <a 
+                          href={dropdownItem.href}
+                          className={styles.dropdownLink}
+                        >
+                          {dropdownItem.text}
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>
