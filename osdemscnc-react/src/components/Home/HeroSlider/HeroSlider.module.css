@@ -826,8 +826,8 @@
   backdrop-filter: blur(10px);
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  min-width: clamp(140px, 20vw, 180px);
-  max-width: 200px;
+  min-width: clamp(160px, 22vw, 220px);
+  max-width: 240px;
   position: relative;
   transition: all 0.3s ease;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -885,7 +885,7 @@
 }
 
 .statNumber {
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-size: clamp(2.2rem, 3.5vw, 3rem);
   font-weight: 700;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   margin-bottom: 10px;
@@ -894,6 +894,8 @@
   z-index: 1;
   transition: transform 0.3s ease;
   line-height: 1.1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .statCard:hover .statNumber {
