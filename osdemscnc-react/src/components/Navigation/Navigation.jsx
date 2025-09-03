@@ -19,8 +19,7 @@ const Navigation = ({ items = [], className = '', isLoading = false }) => {
     },
     { text: 'SERVICES', href: '/servicios' },
     { text: 'AMR', href: '/amr' },
-    { text: 'INDUSTRIES', href: '/industries' },
-    { text: 'CARRER', href: '/contacto' }
+    { text: 'INDUSTRIES', href: '/industries' }
   ];
 
   const navigationItems = items.length > 0 ? items : defaultItems;

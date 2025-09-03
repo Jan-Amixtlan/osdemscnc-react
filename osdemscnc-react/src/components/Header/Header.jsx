@@ -69,7 +69,7 @@ const Header = () => {
             { text: 'SERVICES', href: '/servicios' },
             { text: 'AMR', href: '/amr' },
             { text: 'INDUSTRIES', href: '/industries' },
-            { text: 'CAREER', href: '/contacto' }
+          
         ],
         social: [
             { platform: 'Facebook', url: 'https://www.facebook.com/osdemsmaquinados?mibextid=JRoKGi', icon: 'fab fa-facebook-f' },
