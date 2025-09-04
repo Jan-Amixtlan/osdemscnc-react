@@ -103,7 +103,7 @@ const Header = () => {
                     <div className={styles.mainHeaderContent}>
                         <a href="/" className={styles.logo}>
                             <img
-                                src="/public/images/logo-cnc-nuevo.jpg"
+                                src="/public/osdems-cnc.png"
                                 alt="OSDEMS CNC"
                                 className={styles.logoImage}
                             />
