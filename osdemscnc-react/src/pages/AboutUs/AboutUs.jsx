@@ -14,7 +14,23 @@ const AboutUs = () => {
               className={styles.heroImage}
             />
             <div className={styles.heroOverlay}>
-              <h1 className={styles.heroTitle}>ABOUT<br />US</h1>
+              <div className={styles.heroContent}>
+                <div className={styles.heroParticles}>
+                  <div className={styles.particle}></div>
+                  <div className={styles.particle}></div>
+                  <div className={styles.particle}></div>
+                  <div className={styles.particle}></div>
+                  <div className={styles.particle}></div>
+                </div>
+                <h1 className={styles.heroTitle}>
+                  <span className={styles.titleLine}>ABOUT</span>
+                  <span className={styles.titleLine}>US</span>
+                </h1>
+                <div className={styles.heroSubtitle}>
+                  <p>Precision Manufacturing Excellence</p>
+                  <div className={styles.heroLine}></div>
+                </div>
+              </div>
             </div>
           </div>
           <div className={styles.heroSlide}>
@@ -24,7 +40,23 @@ const AboutUs = () => {
               className={styles.heroImage}
             />
             <div className={styles.heroOverlay}>
-              <h1 className={styles.heroTitle}>BUSINESS<br />AND</h1>
+              <div className={styles.heroContent}>
+                <div className={styles.heroParticles}>
+                  <div className={styles.particle}></div>
+                  <div className={styles.particle}></div>
+                  <div className={styles.particle}></div>
+                  <div className={styles.particle}></div>
+                  <div className={styles.particle}></div>
+                </div>
+                <h1 className={styles.heroTitle}>
+                  <span className={styles.titleLine}>BUSINESS</span>
+                  <span className={styles.titleLine}>AND</span>
+                </h1>
+                <div className={styles.heroSubtitle}>
+                  <p>Industrial Solutions Provider</p>
+                  <div className={styles.heroLine}></div>
+                </div>
+              </div>
             </div>
           </div>
           <div className={styles.heroSlide}>
@@ -34,9 +66,29 @@ const AboutUs = () => {
               className={styles.heroImage}
             />
             <div className={styles.heroOverlay}>
-              <h1 className={styles.heroTitle}>MACHINES</h1>
+              <div className={styles.heroContent}>
+                <div className={styles.heroParticles}>
+                  <div className={styles.particle}></div>
+                  <div className={styles.particle}></div>
+                  <div className={styles.particle}></div>
+                  <div className={styles.particle}></div>
+                  <div className={styles.particle}></div>
+                </div>
+                <h1 className={styles.heroTitle}>
+                  <span className={styles.titleLine}>MACHINES</span>
+                </h1>
+                <div className={styles.heroSubtitle}>
+                  <p>Advanced Technology Integration</p>
+                  <div className={styles.heroLine}></div>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+        <div className={styles.heroIndicators}>
+          <div className={styles.indicator}></div>
+          <div className={styles.indicator}></div>
+          <div className={styles.indicator}></div>
         </div>
       </section>
 

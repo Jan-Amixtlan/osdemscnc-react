@@ -13,8 +13,7 @@ const Navigation = ({ items = [], className = '', isLoading = false }) => {
       hasDropdown: true,
       dropdownItems: [
         { text: 'ABOUT US', href: '/about-us' },
-        { text: 'HISTORY', href: '/history' },
-        { text: 'NEWS', href: 'https://www.manufacturingtomorrow.com/' }
+        { text: 'HISTORY', href: '/history' }
       ]
     },
     { text: 'SERVICES', href: '/servicios' },

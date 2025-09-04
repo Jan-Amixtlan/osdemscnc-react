@@ -62,8 +62,7 @@ const Header = () => {
                 hasDropdown: true,
                 dropdownItems: [
                     { text: 'ABOUT US', href: '/nosotros' },
-                    { text: 'HISTORY', href: '/history' },
-                    { text: 'NEWS', href: 'https://www.manufacturingtomorrow.com/'}
+                    { text: 'HISTORY', href: '/history' }
                 ]
             },
             { text: 'SERVICES', href: '/servicios' },
