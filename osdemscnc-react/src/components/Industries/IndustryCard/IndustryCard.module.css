@@ -259,13 +259,27 @@
   .contentGrid {
     grid-template-columns: 1fr;
     gap: 40px;
+    /* Forzar que la imagen siempre esté arriba en móviles */
+    grid-template-areas: 
+      "image"
+      "content";
   }
   
   .contentGrid.reverse {
-    grid-template-areas: none;
+    /* Mantener el mismo orden en móviles, ignorar el reverse */
+    grid-template-areas: 
+      "image"
+      "content";
+  }
+  
+  .imageColumn {
+    grid-area: image;
+    order: 1;
   }
   
   .contentColumn {
+    grid-area: content;
+    order: 2;
     padding: 20px;
   }
   
@@ -306,9 +320,20 @@
   
   .contentGrid {
     gap: 30px;
+    /* Mantener el orden consistente también en pantallas muy pequeñas */
+    grid-template-areas: 
+      "image"
+      "content";
+  }
+  
+  .imageColumn {
+    grid-area: image;
+    order: 1;
   }
   
   .contentColumn {
+    grid-area: content;
+    order: 2;
     padding: 15px;
   }
   
