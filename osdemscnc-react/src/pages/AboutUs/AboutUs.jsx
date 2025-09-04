@@ -40,6 +40,48 @@ const AboutUs = () => {
         </div>
       </section>
 
+      {/* About Section */}
+      <section className={styles.aboutSection}>
+        <div className={styles.container}>
+          <div className={styles.aboutGrid}>
+            <div className={styles.aboutImageColumn}>
+              <div className={styles.aboutImage}>
+                <img 
+                  src="https://osdemscnc.com/wp-content/uploads/2023/11/galeria15.jpg" 
+                  alt="OSDEMS CNC History" 
+                  className={styles.image}
+                />
+              </div>
+            </div>
+            <div className={styles.aboutContentColumn}>
+              <h2 className={styles.aboutHeading}>About us...</h2>
+              <div className={styles.aboutText}>
+                <p>
+                  Our company, OSDEMS Industrial, was founded in 2023 by Daniel Carrillo. 
+                  The idea for the business came about when Daniel noticed a gap in the market 
+                  for high-quality, precision products. With his background in SMT manufacturing 
+                  process and Equipment and his passion for customers best service, best support, 
+                  he set out to create a company that would provide effective CNC Manufacturer parts 
+                  to any industry bringing just in time solutions while minimizing high cost production.
+                </p>
+              </div>
+              <div className={styles.aboutButton}>
+                <button className={styles.moreInfoButton}>
+                  <span>more info</span>
+                  <svg 
+                    className={styles.buttonIcon} 
+                    viewBox="0 0 448 512" 
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Main Content Section */}
       <section className={styles.mainContent}>
         <div className={styles.container}>
@@ -100,7 +142,40 @@ const AboutUs = () => {
         </div>
       </section>
 
+      {/* Links Section */}
+      <section className={styles.linksSection}>
+        <div className={styles.container}>
+          <div className={styles.linksGrid}>
+            <div className={styles.linkColumn}>
+              <h3 className={styles.linkColumnTitle}>Products</h3>
+              <div className={styles.linkList}>
+                <a href="#" className={styles.linkItem}>Product world</a>
+                <a href="#" className={styles.linkItem}>New products</a>
+                <a href="#" className={styles.linkItem}>CAD Downloads</a>
+                <a href="#" className={styles.linkItem}>On-line catalogue</a>
+              </div>
+            </div>
 
+            <div className={styles.linkColumn}>
+              <h3 className={styles.linkColumnTitle}>Customer Solutions</h3>
+              <div className={styles.linkList}>
+                <a href="#" className={styles.linkItem}>Configurators</a>
+                <a href="#" className={styles.linkItem}>Application examples</a>
+                <a href="#" className={styles.linkItem}>Project request</a>
+              </div>
+            </div>
+
+            <div className={styles.linkColumn}>
+              <h3 className={styles.linkColumnTitle}>Service</h3>
+              <div className={styles.linkList}>
+                <a href="#" className={styles.linkItem}>Contact</a>
+                <a href="#" className={styles.linkItem}>Download center</a>
+                <a href="#" className={styles.linkItem}>Find contacts</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     
     </div>
   );
