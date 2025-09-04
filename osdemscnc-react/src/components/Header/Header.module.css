@@ -45,6 +45,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  position: relative;
 }
 
 /* Logo */
@@ -126,8 +127,11 @@
 
 /* Navigation integration */
 .navigation {
-  flex: 1;
-  max-width: 600px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
 }
 
 /* Mobile Menu Button */

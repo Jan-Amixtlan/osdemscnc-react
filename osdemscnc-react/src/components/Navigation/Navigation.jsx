@@ -12,8 +12,7 @@ const Navigation = ({ items = [], className = '', isLoading = false }) => {
       href: '/nosotros', 
       hasDropdown: true,
       dropdownItems: [
-        { text: 'ABOUT US', href: '/about-us' },
-        { text: 'HISTORY', href: '/history' }
+        { text: 'ABOUT US', href: '/about-us' }
       ]
     },
     { text: 'SERVICES', href: '/servicios' },

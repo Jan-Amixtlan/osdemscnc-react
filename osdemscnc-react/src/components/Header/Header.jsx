@@ -61,8 +61,7 @@ const Header = () => {
                 href: '/nosotros',
                 hasDropdown: true,
                 dropdownItems: [
-                    { text: 'ABOUT US', href: '/nosotros' },
-                    { text: 'HISTORY', href: '/history' }
+                    { text: 'ABOUT US', href: '/nosotros' }
                 ]
             },
             { text: 'SERVICES', href: '/servicios' },
