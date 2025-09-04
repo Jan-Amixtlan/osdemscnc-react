@@ -1,4 +1,4 @@
-/* Testimonials Section */
+/* ===== TESTIMONIALS SECTION ===== */
 .testimonials {
   background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 100%);
   color: white;
@@ -21,12 +21,8 @@
 }
 
 @keyframes testimonialBg {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-  }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
 }
 
 .container {
@@ -48,458 +44,697 @@
   font-weight: 800;
   margin-bottom: 60px;
   background: linear-gradient(135deg, #016c6b, #20b9db, #016c6b);
+  background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: glow 2s ease-in-out infinite alternate;
+  animation: gradientShift 4s ease-in-out infinite;
 }
 
-@keyframes glow {
-  from {
-    filter: drop-shadow(0 0 20px rgba(1, 108, 107, 0.5));
-  }
-  to {
-    filter: drop-shadow(0 0 30px rgba(32, 185, 219, 0.8));
-  }
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
 .testimonialCard {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
-  border-radius: 25px;
-  padding: 50px 40px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
-}
-
-.testimonialCard::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
-  animation: cardShimmer 4s ease-in-out infinite;
-}
-
-@keyframes cardShimmer {
-  0% {
-    left: -100%;
-  }
-  50% {
-    left: 100%;
-  }
-  100% {
-    left: 100%;
-  }
 }
 
 .quoteIcon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 30px;
-  background: linear-gradient(135deg, #016c6b, #20b9db);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  box-shadow: 0 15px 35px rgba(1, 108, 107, 0.3);
+  color: #009999;
+  margin-bottom: 20px;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.testimonialCard:hover .quoteIcon {
+  transform: scale(1.1);
 }
 
 .testimonialQuote {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   line-height: 1.8;
-  font-style: italic;
-  margin-bottom: 40px;
   color: rgba(255, 255, 255, 0.9);
-  position: relative;
-  z-index: 1;
-  text-align: left;
+  margin-bottom: 30px;
+  font-style: italic;
 }
 
 .testimonialAuthor {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  position: relative;
-  z-index: 1;
+  gap: 15px;
 }
 
 .authorAvatar {
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, #20b9db, #016c6b);
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #009999, #00cccc);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  font-size: 1.2rem;
+  font-weight: bold;
   color: white;
-  box-shadow: 0 8px 25px rgba(32, 185, 219, 0.3);
-}
-
-.authorInfo {
-  text-align: left;
 }
 
 .authorInfo cite {
-  display: block;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  color: #016c6b;
+  color: #009999;
   font-style: normal;
-  margin-bottom: 5px;
 }
 
-.authorInfo span {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 1rem;
-}
-
-/* Contact CTA Section */
+/* ===== CONTACT CTA SECTION ===== */
 .contactCta {
-  background: linear-gradient(135deg, #016c6b 0%, #20b9db 100%);
-  color: white;
-  padding: 120px 0;
-  text-align: center;
+  min-height: 100vh;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
+  background: #000;
 }
 
-.dotMatrix {
+/* Industrial Background */
+.backgroundLayer {
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: 
-    radial-gradient(circle, rgba(255, 255, 255, 0.1) 2px, transparent 2px);
-  background-size: 60px 60px;
-  animation: dotMove 25s linear infinite;
-  pointer-events: none;
+    linear-gradient(45deg, rgba(0,0,0,0.8) 0%, rgba(20,20,20,0.9) 50%, rgba(0,0,0,0.8) 100%),
+    url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='industrial' x='0' y='0' width='50' height='50' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='25' cy='25' r='2' fill='%23009999' opacity='0.1'/%3E%3Ccircle cx='0' cy='0' r='1' fill='%23ff6600' opacity='0.1'/%3E%3Ccircle cx='50' cy='50' r='1' fill='%23ff6600' opacity='0.1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23industrial)'/%3E%3C/svg%3E");
+  z-index: 1;
 }
 
-@keyframes dotMove {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  100% {
-    transform: translate(60px, 60px) rotate(360deg);
-  }
-}
-
-.contactContent {
-  max-width: 700px;
-  margin: 0 auto;
-  position: relative;
+.overlayGradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 30% 40%, rgba(0,153,153,0.15) 0%, transparent 50%),
+    radial-gradient(circle at 70% 60%, rgba(255,102,0,0.1) 0%, transparent 50%),
+    linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(20,20,30,0.8) 100%);
   z-index: 2;
 }
 
-.ctaIcon {
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 40px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
+/* Floating Particles */
+.floatingParticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #009999;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  animation: iconFloat 3s ease-in-out infinite;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  opacity: 0.6;
+  animation: float 8s linear infinite;
 }
 
-@keyframes iconFloat {
-  0%, 100% {
-    transform: translateY(0px) scale(1);
+.particle1 { left: 10%; animation-delay: 0s; animation-duration: 12s; }
+.particle2 { left: 20%; animation-delay: 1s; animation-duration: 10s; background: #ff6600; }
+.particle3 { left: 30%; animation-delay: 2s; animation-duration: 14s; }
+.particle4 { left: 40%; animation-delay: 3s; animation-duration: 11s; background: #ff6600; }
+.particle5 { left: 50%; animation-delay: 4s; animation-duration: 13s; }
+.particle6 { left: 60%; animation-delay: 5s; animation-duration: 9s; background: #ff6600; }
+.particle7 { left: 70%; animation-delay: 6s; animation-duration: 15s; }
+.particle8 { left: 80%; animation-delay: 7s; animation-duration: 12s; background: #ff6600; }
+.particle9 { left: 90%; animation-delay: 8s; animation-duration: 10s; }
+.particle10 { left: 15%; animation-delay: 2.5s; animation-duration: 11s; background: #ff6600; }
+.particle11 { left: 45%; animation-delay: 4.5s; animation-duration: 13s; }
+.particle12 { left: 75%; animation-delay: 6.5s; animation-duration: 9s; background: #ff6600; }
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) scale(0);
+    opacity: 0;
   }
-  50% {
-    transform: translateY(-10px) scale(1.05);
+  10% {
+    opacity: 0.6;
+    transform: scale(1);
   }
-}
-
-.contactTitle {
-  font-size: 4rem;
-  font-weight: 900;
-  margin-bottom: 30px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  transform: scale(0.8) translateY(30px);
-  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.contactTitle.animate {
-  opacity: 1;
-  transform: scale(1) translateY(0);
-}
-
-.contactDescription {
-  margin-bottom: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 60px;
-}
-
-.typewriter {
-  font-size: 2rem;
-  font-weight: 700;
-  color: white;
-  display: inline-flex;
-  align-items: center;
-}
-
-.cursor {
-  animation: blink 1s infinite;
-  margin-left: 2px;
-  color: #20b9db;
-  font-weight: normal;
-}
-
-@keyframes blink {
-  0%, 50% {
-    opacity: 1;
+  90% {
+    opacity: 0.6;
   }
-  51%, 100% {
+  100% {
+    transform: translateY(-100px) scale(0);
     opacity: 0;
   }
 }
 
-.contactActions {
-  margin-top: 50px;
-}
-
-.contactButton {
-  background: white;
-  color: #016c6b;
-  padding: 20px 50px;
-  border: none;
-  border-radius: 50px;
-  font-size: 1.3rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 15px;
-  position: relative;
-  overflow: hidden;
-  opacity: 0;
-  transform: translateY(30px) scale(0.9);
-  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-  letter-spacing: 1px;
-}
-
-.contactButton.animate {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-.contactButton::before {
-  content: '';
+/* Animated Gears */
+.gearContainer {
   position: absolute;
   top: 0;
   left: 0;
-  width: 0;
+  width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #25D366, #128C7E);
-  transition: width 0.4s ease;
-  z-index: -1;
-  border-radius: 50px;
+  z-index: 2;
 }
 
-.contactButton:hover::before {
+.gear {
+  position: absolute;
+  opacity: 0.3;
+}
+
+.gear1 {
+  top: 20%;
+  right: 10%;
+  width: 120px;
+  height: 120px;
+  animation: rotateClockwise 20s linear infinite;
+}
+
+.gear2 {
+  bottom: 25%;
+  left: 8%;
+  width: 80px;
+  height: 80px;
+  animation: rotateCounterClockwise 15s linear infinite;
+}
+
+.gearSvg {
   width: 100%;
+  height: 100%;
+}
+
+@keyframes rotateClockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotateCounterClockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+/* Content */
+.contactContent {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Animated Icon */
+.ctaIcon {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 40px;
+  color: #009999;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.iconAnimate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.iconGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(0,153,153,0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+/* Title */
+.contactTitle {
+  font-size: 4.5rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  position: relative;
+}
+
+.contactTitle.animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.titleLine1 {
+  display: block;
+  background: linear-gradient(135deg, #ffffff 0%, #009999 50%, #ff6600 100%);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: titleGradient 3s ease-in-out infinite;
+  text-shadow: 0 0 30px rgba(0,153,153,0.5);
+}
+
+@keyframes titleGradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ===== IMAGE CAROUSEL ===== */
+.carouselContainer {
+  margin: 40px 0 60px;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+}
+
+.carouselAnimate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.carousel {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,153,153,0.2);
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 400%; /* 4 imágenes */
+}
+
+.carouselSlide {
+  width: 25%; /* 100% / 4 imágenes */
+  flex-shrink: 0;
+}
+
+.slideImage {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.slideImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.carousel:hover .slideImage img {
+  transform: scale(1.05);
+}
+
+.slideOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  padding: 30px 20px 20px;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.carousel:hover .slideOverlay {
+  transform: translateY(0);
+}
+
+.slideContent h3 {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.slideContent p {
+  color: rgba(255,255,255,0.9);
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Navigation Buttons */
+.carouselButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,153,153,0.9);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.carouselButton:hover {
+  background: rgba(0,153,153,1);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 5px 20px rgba(0,153,153,0.4);
+}
+
+.prevButton {
+  left: 15px;
+}
+
+.nextButton {
+  right: 15px;
+}
+
+/* Dots Indicator */
+.carouselDots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.5);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot:hover {
+  border-color: rgba(255,255,255,0.8);
+  transform: scale(1.2);
+}
+
+.dotActive {
+  background: #009999;
+  border-color: #009999;
+  box-shadow: 0 0 10px rgba(0,153,153,0.6);
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
+}
+
+.dividerAnimate {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.dividerLine {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #009999, transparent);
+  animation: lineGlow 2s ease-in-out infinite;
+}
+
+.dividerIcon {
+  margin: 0 20px;
+  color: #009999;
+  animation: iconSpin 4s linear infinite;
+}
+
+@keyframes lineGlow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes iconSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Typewriter Text */
+.contactDescription {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 50px;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.typewriter {
+  display: inline-block;
+  position: relative;
+}
+
+.cursor {
+  color: #009999;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Contact Actions */
+.contactActions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contactButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 40px;
+  background: linear-gradient(135deg, #009999 0%, #00cccc 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  transform: translateY(50px);
+  opacity: 0;
+  box-shadow: 0 10px 30px rgba(0,153,153,0.3);
+}
+
+.buttonAnimate {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.9s;
+}
+
+.buttonGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 100%);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.contactButton:hover .buttonGlow {
+  transform: translateX(100%);
 }
 
 .contactButton:hover {
-  color: white;
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,153,153,0.4);
+  background: linear-gradient(135deg, #00cccc 0%, #009999 100%);
 }
 
-.contactButton svg {
-  transition: transform 0.3s ease;
-  fill: currentColor;
+.buttonRipple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.6s ease;
 }
 
-.contactButton:hover svg {
-  transform: scale(1.1) rotate(5deg);
+.contactButton:active .buttonRipple {
+  width: 300px;
+  height: 300px;
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-  .testimonials {
-    padding: 80px 0;
-  }
-
-  .contactCta {
-    padding: 100px 0;
-  }
-
-  .testimonialTitle {
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-  }
-
-  .testimonialCard {
-    padding: 40px 30px;
-  }
-
-  .testimonialQuote {
-    font-size: 1.2rem;
-  }
-
+@media (max-width: 768px) {
   .contactTitle {
     font-size: 3rem;
   }
-
-  .typewriter {
-    font-size: 1.8rem;
+  
+  .contactDescription {
+    font-size: 1.4rem;
   }
-
-  .contactButton {
-    padding: 18px 45px;
+  
+  .gear1, .gear2 {
+    opacity: 0.2;
+  }
+  
+  .gear1 {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .gear2 {
+    width: 60px;
+    height: 60px;
+  }
+  
+  /* Carousel responsive */
+  .carousel {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  
+  .slideImage {
+    height: 280px;
+  }
+  
+  .carouselButton {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .prevButton {
+    left: 10px;
+  }
+  
+  .nextButton {
+    right: 10px;
+  }
+  
+  .slideContent h3 {
     font-size: 1.2rem;
   }
-}
-
-@media (max-width: 768px) {
-  .testimonials {
-    padding: 60px 0;
-  }
-
-  .contactCta {
-    padding: 80px 0;
-  }
-
-  .container {
-    padding: 0 20px;
-  }
-
-  .testimonialTitle {
-    font-size: 2rem;
-    margin-bottom: 40px;
-  }
-
-  .testimonialCard {
-    padding: 30px 25px;
-  }
-
-  .testimonialQuote {
-    font-size: 1.1rem;
-    text-align: center;
-  }
-
-  .testimonialAuthor {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .authorInfo {
-    text-align: center;
-  }
-
-  .ctaIcon {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 30px;
-  }
-
-  .contactTitle {
-    font-size: 2.5rem;
-    margin-bottom: 25px;
-  }
-
-  .typewriter {
-    font-size: 1.5rem;
-  }
-
-  .contactButton {
-    width: 100%;
-    max-width: 350px;
-    padding: 16px 40px;
-    font-size: 1.1rem;
-    justify-content: center;
+  
+  .slideContent p {
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
-  .testimonials {
-    padding: 50px 0;
+  .contactTitle {
+    font-size: 2.5rem;
   }
-
-  .contactCta {
-    padding: 60px 0;
-  }
-
-  .container {
-    padding: 0 15px;
-  }
-
-  .testimonialTitle {
-    font-size: 1.8rem;
-  }
-
-  .testimonialCard {
-    padding: 25px 20px;
-  }
-
-  .quoteIcon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 25px;
-  }
-
-  .testimonialQuote {
-    font-size: 1rem;
-    margin-bottom: 30px;
-  }
-
-  .authorAvatar {
-    width: 50px;
-    height: 50px;
-    font-size: 1rem;
-  }
-
-  .authorInfo cite {
+  
+  .contactDescription {
     font-size: 1.2rem;
   }
-
-  .ctaIcon {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 25px;
-  }
-
-  .contactTitle {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-
-  .typewriter {
-    font-size: 1.3rem;
-    text-align: center;
-    line-height: 1.3;
-  }
-
+  
   .contactButton {
-    padding: 14px 35px;
+    padding: 15px 30px;
     font-size: 1rem;
-    gap: 10px;
   }
-
-  .dotMatrix {
-    background-size: 40px 40px;
+  
+  .floatingParticles {
+    display: none;
+  }
+  
+  /* Carousel mobile */
+  .carousel {
+    max-width: 95%;
+  }
+  
+  .slideImage {
+    height: 220px;
+  }
+  
+  .carouselButton {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .carouselButton svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .prevButton {
+    left: 8px;
+  }
+  
+  .nextButton {
+    right: 8px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .carouselDots {
+    bottom: 15px;
+    gap: 8px;
+  }
+  
+  .slideContent h3 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+  }
+  
+  .slideContent p {
+    font-size: 0.85rem;
+  }
+  
+  .slideOverlay {
+    padding: 20px 15px 15px;
   }
 }
