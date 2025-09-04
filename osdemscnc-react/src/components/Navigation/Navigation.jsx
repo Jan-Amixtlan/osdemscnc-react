@@ -1,12 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './Navigation.module.css';
 
 const Navigation = ({ items = [], className = '', isLoading = false }) => {
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [currentPath, setCurrentPath] = useState('');
+
+  // Detectar la ruta actual
+  useEffect(() => {
+    setCurrentPath(window.location.pathname);
+    
+    // Escuchar cambios en la URL (para navegación por historia del navegador)
+    const handleLocationChange = () => {
+      setCurrentPath(window.location.pathname);
+    };
+    
+    window.addEventListener('popstate', handleLocationChange);
+    
+    return () => {
+      window.removeEventListener('popstate', handleLocationChange);
+    };
+  }, []);
 
   // Datos de navegación por defecto si no se pasan items
   const defaultItems = [
-    { text: 'HOME', href: '/', active: true },
+    { text: 'HOME', href: '/' },
     { 
       text: 'COMPANY', 
       href: '/nosotros', 
@@ -22,6 +39,24 @@ const Navigation = ({ items = [], className = '', isLoading = false }) => {
 
   const navigationItems = items.length > 0 ? items : defaultItems;
 
+  // Función para determinar si un item está activo
+  const isItemActive = (item) => {
+    if (item.href === '/' && currentPath === '/') {
+      return true;
+    }
+    if (item.href !== '/' && currentPath.startsWith(item.href)) {
+      return true;
+    }
+    // Verificar si algún elemento del dropdown está activo
+    if (item.hasDropdown && item.dropdownItems) {
+      return item.dropdownItems.some(dropdownItem => 
+        dropdownItem.href === currentPath || 
+        (dropdownItem.href !== '/' && currentPath.startsWith(dropdownItem.href))
+      );
+    }
+    return false;
+  };
+
   const handleMouseEnter = (index) => {
     setActiveDropdown(index);
   };
@@ -34,11 +69,14 @@ const Navigation = ({ items = [], className = '', isLoading = false }) => {
     window.open(url, '_blank', 'noopener,noreferrer');
   };
 
-  const handleDropdownClick = (e, item) => {
+  const handleClick = (e, item) => {
     if (item.hasDropdown) {
       e.preventDefault();
       // Toggle dropdown instead of navigating
       setActiveDropdown(activeDropdown === navigationItems.indexOf(item) ? null : navigationItems.indexOf(item));
+    } else {
+      // Para navegación normal, actualizar la ruta actual
+      setCurrentPath(item.href);
     }
   };
 
@@ -59,7 +97,7 @@ const Navigation = ({ items = [], className = '', isLoading = false }) => {
             {item.external ? (
               <button 
                 onClick={() => handleExternalLink(item.href)}
-                className={`${styles.navigationLink} ${item.active ? styles.active : ''}`}
+                className={`${styles.navigationLink} ${isItemActive(item) ? styles.active : ''}`}
                 style={{ 
                   background: 'none', 
                   border: 'none', 
@@ -74,8 +112,8 @@ const Navigation = ({ items = [], className = '', isLoading = false }) => {
             ) : (
               <a 
                 href={item.hasDropdown ? '#' : item.href}
-                className={`${styles.navigationLink} ${item.active ? styles.active : ''}`}
-                onClick={(e) => handleDropdownClick(e, item)}
+                className={`${styles.navigationLink} ${isItemActive(item) ? styles.active : ''}`}
+                onClick={(e) => handleClick(e, item)}
               >
                 {item.text}
                 {item.hasDropdown && <span className={styles.dropdownArrow}> ▼</span>}

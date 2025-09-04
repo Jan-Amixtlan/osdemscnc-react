@@ -55,7 +55,7 @@ const Header = () => {
             phones: ["+52 33 1822 4312", "+52 33 1174 4584", "+52 33 2622 5912"]
         },
         navigation: [
-            { text: 'HOME', href: '/', active: true },
+            { text: 'HOME', href: '/' },
             {
                 text: 'COMPANY',
                 href: '/nosotros',

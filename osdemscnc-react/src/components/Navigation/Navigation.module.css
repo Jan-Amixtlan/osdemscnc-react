@@ -66,19 +66,43 @@
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   background-color: transparent;
   border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.navigationLink::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #009999, #00cccc);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
 }
 
 .navigationLink:hover {
-  color: white;
-  background-color: #009999;
+  color: #009999;
+  background-color: rgba(0, 153, 153, 0.1);
+}
+
+.navigationLink:hover::before {
+  width: 80%;
 }
 
 .navigationLink.active {
   color: white;
   background-color: #009999;
+  box-shadow: 0 2px 8px rgba(0, 153, 153, 0.3);
+}
+
+.navigationLink.active::before {
+  width: 100%;
+  background: white;
 }
 
 .dropdownArrow {
