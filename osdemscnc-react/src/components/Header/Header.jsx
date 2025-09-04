@@ -103,7 +103,7 @@ const Header = () => {
                     <div className={styles.mainHeaderContent}>
                         <a href="/" className={styles.logo}>
                             <img
-                                src="/public/osdems-cnc.png"
+                                src="/osdems-cnc.png"
                                 alt="OSDEMS CNC"
                                 className={styles.logoImage}
                             />
@@ -139,7 +139,7 @@ const Header = () => {
             {/* Menú móvil */}
             <div className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
                 <div className={styles.mobileMenuHeader}>
-                    <img src="/public/images/logo-cnc-nuevo.jpg" alt="OSDEMS CNC" className={styles.mobileMenuLogo} />
+                    <img src="/osdems-cnc.png" alt="OSDEMS CNC" className={styles.mobileMenuLogo} />
                     <button 
                         className={styles.mobileMenuClose}
                         onClick={closeMobileMenu}
