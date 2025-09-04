@@ -53,9 +53,7 @@ const ContactCTA = () => {
                 </svg>
               </div>
               <blockquote className={styles.testimonialQuote}>
-                "I would like to express my utmost appreciation for Osdems CNC, a leading company in the field of advertising.
-                Their commitment to creative design and innovative ideas truly sets them apart in the industry.
-                The team's ability to seamlessly blend creativity with functionality has resulted in remarkable campaigns that resonate with audiences."
+                "I would like to express my utmost appreciation for Osdems CNC, a leading company in the field of advertising. Their commitment to creative design and innovative ideas truly sets them apart in the industry. The team's ability to seamlessly blend creativity with functionality has resulted in remarkable campaigns that resonate with audiences. Osdems CNC consistently demonstrates a deep understanding of market trends, allowing them to craft unique solutions tailored to each client's needs. Their dedication to excellence and forward-thinking approach not only enhances brand visibility but also drives engagement and results. I wholeheartedly recommend Osdems CNC to any organization seeking a partner in innovative advertising solutions. Their passion and expertise make them an invaluable asset in the realm of creative design."
               </blockquote>
               <div className={styles.testimonialAuthor}>
                 <div className={styles.authorAvatar}>
@@ -63,7 +61,6 @@ const ContactCTA = () => {
                 </div>
                 <div className={styles.authorInfo}>
                   <cite>Noe Rivas</cite>
-                  <span>Business Partner</span>
                 </div>
               </div>
             </div>
