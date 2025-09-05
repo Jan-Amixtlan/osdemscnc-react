@@ -95,7 +95,7 @@ const RackSystems = () => {
   const heroData = {
     title: "STAINLESS STEEL RACK",
     subtitle: "OSDEMS CNC",
-    image: "https://osdemscnc.com/wp-content/uploads/2025/01/CONVENTIONAL-MACHINING-SERVICE.jpg"
+    image: "/Services1.jpg" // Updated image path
   };
 
   useEffect(() => {

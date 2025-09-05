@@ -10,14 +10,14 @@ const ServicesHero = () => {
       id: 1,
       title: "OUR MANUFACTURING CAPABILITIES",
       subtitle: "OSDEMS CNC",
-      image: "https://osdemscnc.com/wp-content/uploads/2025/01/MECHANICAL-ASSEMBLY-SERVICES.jpg",
+      image: "/Services2.jpg",
       theme: 'light'
     },
     {
       id: 2,
       title: "STAINLESS STEEL RACK",
       subtitle: "OSDEMS CNC", 
-      image: "https://osdemscnc.com/wp-content/uploads/2025/01/CONVENTIONAL-MACHINING-SERVICE.jpg",
+      image: "/Services1.jpg",
       theme: 'dark'
     }
   ];
