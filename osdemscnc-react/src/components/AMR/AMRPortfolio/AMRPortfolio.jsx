@@ -10,19 +10,19 @@ const AMRPortfolio = () => {
     {
       title: "KUKA mobile platforms",
       description: "Our mobile transport platforms for all payloads are collision-free, operate in a swarm and offer absolute flexibility. And this both as a product carrier and a mobile production station.",
-      image: "https://osdemscnc.com/wp-content/uploads/2025/02/1.avif",
+      image: "/AMR2.avif",
       alt: "KUKA mobile platforms"
     },
     {
       title: "KUKA mobile robots",
       description: "Mobile manipulators are designed for safe transport of materials, machine tending, inspection, order picking and pick & place tasks. AMRs are capable of human-robot collaboration.",
-      image: "https://osdemscnc.com/wp-content/uploads/2025/02/2.avif",
+      image: "/AMR3.avif",
       alt: "KUKA mobile robots"
     },
     {
       title: "Fleet management software",
       description: "The navigation system enables intelligent control, real-time monitoring and optimization of the traffic flow of a heterogeneous group of vehicles (AGVs/AMR) in any configuration.",
-      image: "https://osdemscnc.com/wp-content/uploads/2025/02/3.avif",
+      image: "/AMR4.avif",
       alt: "Fleet management software"
     }
   ];

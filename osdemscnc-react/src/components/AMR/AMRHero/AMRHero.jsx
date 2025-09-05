@@ -18,7 +18,7 @@ const AMRHero = () => {
       </div>
       <div className={styles.heroBackground}>
         <img 
-          src="https://osdemscnc.com/wp-content/uploads/2025/01/desig-cnc1.jpg" 
+          src="/AMR1.jpg" 
           alt="AMR Background" 
           className={styles.heroImage}
         />

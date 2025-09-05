@@ -12,7 +12,7 @@ const AMRVideo = () => {
           loop
           playsInline
         >
-          <source src="https://osdemscnc.com/wp-content/uploads/2025/02/AMR.mp4" type="video/mp4" />
+          <source src="/AMR.mp4" type="video/mp4" />
         </video>
         <div className={styles.videoOverlay}>
           <div className={styles.overlayContent}>
