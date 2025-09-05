@@ -8,33 +8,16 @@ const AboutUs = () => {
       <section className={styles.heroSection}>
         <div className={styles.heroSlider}>
           <div className={styles.heroSlide}>
-            <img 
-              src="/AboutUs1.jpg" 
-              alt="CNC Machining"
-              className={styles.heroImage}
+            <video 
+              src="/AboutUs4.mp4" 
+              autoPlay
+              muted
+              loop
+              playsInline
+              className={styles.heroVideo}
             />
             <div className={styles.heroOverlay}>
               <h1 className={styles.heroTitle}>ABOUT<br />US</h1>
-            </div>
-          </div>
-          <div className={styles.heroSlide}>
-            <img 
-              src="/AboutUs2.jpg" 
-              alt="Business and Machines"
-              className={styles.heroImage}
-            />
-            <div className={styles.heroOverlay}>
-              <h1 className={styles.heroTitle}>BUSINESS<br />AND</h1>
-            </div>
-          </div>
-          <div className={styles.heroSlide}>
-            <img 
-              src="/AboutUs3.jpg" 
-              alt="Machines"
-              className={styles.heroImage}
-            />
-            <div className={styles.heroOverlay}>
-              <h1 className={styles.heroTitle}>MACHINES</h1>
             </div>
           </div>
         </div>
