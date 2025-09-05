@@ -359,9 +359,9 @@
   border-color: rgba(255, 255, 255, 0.6);
 }
 
-.teal .gradientLine {
+/* .teal .gradientLine {
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.6) 100%);
-}
+} */
 
 /* Enhanced Navigation Arrows */
 .navArrow {
@@ -733,16 +733,16 @@
   }
 }
 
-.gradientLine {
+/* .gradientLine {
   width: min(534px, 80vw);
   height: 14px;
   background: linear-gradient(90deg, rgba(1, 108, 107, 1) 0%, rgba(32, 185, 219, 1) 100%);
-  margin: 0 auto 35px;
+  margin: 0 auto 60px;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   animation: expandLine 1s ease-out 0.3s both;
   border-radius: 7px;
   box-shadow: 0 4px 15px rgba(1, 108, 107, 0.3);
-}
+} */
 
 @keyframes expandLine {
   from {

@@ -87,7 +87,6 @@ const HeroSlider = () => {
       
       <div className={styles.container}>
         <div className={styles.heroContent}>
-          <div className={styles.gradientLine}></div>
           <h1 className={styles.heroTitle}>
             {slides[currentSlide].title}
           </h1>
