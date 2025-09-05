@@ -6,25 +6,25 @@ const Footer = () => {
   const [hoveredSocial, setHoveredSocial] = useState(null);
 
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} style={{ paddingTop: '20px', paddingBottom: '10px' }}>
       <div className={styles.container}>
-        <div className={styles.footerContent}>
+        <div className={styles.footerContent} style={{ gap: '10px', marginBottom: '10px' }}>
           {/* ADDRESS LIST */}
           <div className={styles.footerSection}>
-            <h4 className={styles.sectionTitle}>ADDRESS LIST</h4>
-            <div className={styles.addressInfo}>
-              <div className={styles.addressItem}>
+            <h4 className={styles.sectionTitle} style={{ marginBottom: '4px' }}>ADDRESS LIST</h4>
+            <div className={styles.addressInfo} style={{ gap: '1px' }}>
+              <div className={styles.addressItem} style={{ marginBottom: '1px' }}>
                 <span className={styles.addressIcon}>
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                   </svg>
                 </span>
-                <div className={styles.addressText}>
-                  <p>Blvd. Puerta de Hierro 5153 Fracc. Plaza Andares</p>
-                  <p>Zapopan, Jalisco, 45116 Piso 2</p>
+                <div className={styles.addressText} style={{ lineHeight: '1.0' }}>
+                  <p style={{ margin: '0' }}>Blvd. Puerta de Hierro 5153 Fracc. Plaza Andares</p>
+                  <p style={{ margin: '0' }}>Zapopan, Jalisco, 45116 Piso 2</p>
                 </div>
               </div>
-              <div className={styles.contactItem}>
+              <div className={styles.contactItem} style={{ marginBottom: '1px' }}>
                 <span className={styles.contactIcon}>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
@@ -32,7 +32,7 @@ const Footer = () => {
                 </span>
                 <a href="tel:+5233182243123" className={styles.contactLink}>+52 33 1822 4312</a>
               </div>
-              <div className={styles.contactItem}>
+              <div className={styles.contactItem} style={{ marginBottom: '1px' }}>
                 <span className={styles.contactIcon}>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
@@ -40,7 +40,7 @@ const Footer = () => {
                 </span>
                 <a href="tel:+52331174584" className={styles.contactLink}>+52 33 1174 4584</a>
               </div>
-              <div className={styles.contactItem}>
+              <div className={styles.contactItem} style={{ marginBottom: '1px' }}>
                 <span className={styles.contactIcon}>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
@@ -61,8 +61,8 @@ const Footer = () => {
 
           {/* SOCIAL NETWORKS */}
           <div className={styles.footerSection}>
-            <h4 className={styles.sectionTitle}>SOCIAL NETWORKS</h4>
-            <div className={styles.socialNetworks}>
+            <h4 className={styles.sectionTitle} style={{ marginBottom: '4px' }}>SOCIAL NETWORKS</h4>
+            <div className={styles.socialNetworks} style={{ gap: '1px' }}>
               <a 
                 href="https://www.facebook.com/osdemsmaquinados?mibextid=JRoKGi" 
                 target="_blank" 
@@ -128,39 +128,18 @@ const Footer = () => {
 
           {/* OSDEMS CNC */}
           <div className={styles.footerSection}>
-            <h3 className={styles.footerTitle}>Osdems CNC</h3>
-            <p className={styles.footerDescription}>
+            <h3 className={styles.footerTitle} style={{ marginBottom: '4px' }}>Osdems CNC</h3>
+            <p className={styles.footerDescription} style={{ lineHeight: '1.2', margin: '0' }}>
               Precision crafted, performance delivered. Your CNC machining partner for turning designs into flawless 
               reality. Where every cut counts, and innovation meets expertise.
             </p>
           </div>
         </div>
 
-        {/* Newsletter Section */}
-        <div className={styles.newsletterSection}>
-          <div className={styles.newsletterContent}>
-            <h3 className={styles.newsletterTitle}>Mantente al día con nuestras últimas noticias</h3>
-            <p className={styles.newsletterDescription}>Recibe actualizaciones sobre nuevos servicios y tecnologías CNC</p>
-            <div className={styles.newsletterForm}>
-              <input 
-                type="email" 
-                placeholder="Tu email aquí" 
-                className={styles.newsletterInput}
-              />
-              <button className={styles.newsletterButton}>
-                <span>Suscribirse</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-
         {/* Copyright */}
-        <div className={styles.footerBottom}>
+        <div className={styles.footerBottom} style={{ paddingTop: '10px', paddingBottom: '10px' }}>
           <div className={styles.copyright}>
-            <p>&copy; {currentYear} OSDEMSCNC. Todos los derechos reservados.</p>
+            <p style={{ margin: '0' }}>&copy; {currentYear} OSDEMSCNC. Todos los derechos reservados.</p>
             <button className={styles.backToTop} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M18 15l-6-6-6 6"/>

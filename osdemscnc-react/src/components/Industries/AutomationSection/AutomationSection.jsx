@@ -30,8 +30,8 @@ const AutomationSection = () => {
           <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       ),
-      title: "Eficiencia Mejorada",
-      description: "Incrementa la productividad hasta un 40% mediante la automatización de procesos repetitivos."
+      title: "Enhanced Efficiency",
+      description: "Increase productivity by up to 40% through automation of repetitive processes."
     },
     {
       icon: (
@@ -40,8 +40,8 @@ const AutomationSection = () => {
           <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2"/>
         </svg>
       ),
-      title: "Calidad Consistente",
-      description: "Reduce errores humanos y mantiene estándares de calidad uniformes en toda la producción."
+      title: "Consistent Quality",
+      description: "Reduce human errors and maintain uniform quality standards throughout production."
     },
     {
       icon: (
@@ -52,8 +52,8 @@ const AutomationSection = () => {
           <path d="M3 12h6l-3 3 3 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       ),
-      title: "Escalabilidad",
-      description: "Adapta fácilmente la producción a las demandas del mercado sin comprometer la calidad."
+      title: "Scalability",
+      description: "Easily adapt production to market demands without compromising quality."
     },
     {
       icon: (
@@ -64,8 +64,8 @@ const AutomationSection = () => {
           <path d="M11 12H9c-1 0-2-1-2-2V7c0-1 1-2 2-2h2v7z" stroke="currentColor" strokeWidth="2"/>
         </svg>
       ),
-      title: "Reducción de Costos",
-      description: "Minimiza costos operativos a largo plazo y optimiza el uso de recursos materiales."
+      title: "Cost Reduction",
+      description: "Minimize long-term operational costs and optimize material resource usage."
     }
   ];
 
@@ -84,11 +84,11 @@ const AutomationSection = () => {
       <div className={styles.container}>
         {/* Header */}
         <div className={styles.header}>
-          <h2 className={styles.title}>¿Por Qué es Importante la Automatización?</h2>
+          <h2 className={styles.title}>Why Automation Matters in Today's Competitive Market</h2>
           <div className={styles.titleUnderline}></div>
           <p className={styles.subtitle}>
-            La automatización industrial no es solo una tendencia, es una necesidad estratégica 
-            que define el futuro de la manufactura competitiva.
+            Industrial automation is not just a trend, it's a strategic necessity 
+            that defines the future of competitive manufacturing.
           </p>
         </div>
 
@@ -113,31 +113,31 @@ const AutomationSection = () => {
         <div className={styles.statisticsSection}>
           <div className={styles.statCard}>
             <div className={styles.statNumber}>40%</div>
-            <div className={styles.statLabel}>Incremento en Productividad</div>
+            <div className={styles.statLabel}>Productivity Increase</div>
           </div>
           <div className={styles.statCard}>
             <div className={styles.statNumber}>60%</div>
-            <div className={styles.statLabel}>Reducción de Errores</div>
+            <div className={styles.statLabel}>Error Reduction</div>
           </div>
           <div className={styles.statCard}>
             <div className={styles.statNumber}>25%</div>
-            <div className={styles.statLabel}>Ahorro en Costos Operativos</div>
+            <div className={styles.statLabel}>Operational Cost Savings</div>
           </div>
           <div className={styles.statCard}>
             <div className={styles.statNumber}>80%</div>
-            <div className={styles.statLabel}>Mejora en Calidad</div>
+            <div className={styles.statLabel}>Quality Improvement</div>
           </div>
         </div>
 
         {/* Call to Action */}
         <div className={styles.ctaSection}>
-          <h3 className={styles.ctaTitle}>¿Listo para Transformar tu Industria?</h3>
-          <p className={styles.ctaDescription}>
-            Descubre cómo nuestras soluciones de automatización pueden revolucionar 
-            tu proceso productivo y llevarte al siguiente nivel de competitividad.
+          <h3 className={styles.ctaTitle}>Ready to Transform Your Industry?</h3>
+          <p className={styles.ctaDescription} style={{ color: 'white' }}>
+            Discover how our automation solutions can revolutionize 
+            your production process and take you to the next level of competitiveness.
           </p>
           <button className={styles.ctaButton}>
-            <span>Consulta Gratuita</span>
+            <span>Free Consultation</span>
             <svg viewBox="0 0 24 24" fill="none" className={styles.buttonIcon}>
               <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
