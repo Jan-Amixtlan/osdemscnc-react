@@ -8,17 +8,17 @@ const VideoCarousel = () => {
     const videos = [
         {
             id: 1,
-            src: "https://osdemscnc.com/wp-content/uploads/2025/02/servicios-video-1.mp4",
+            src: "/servicios-video-1.mp4",
             poster: "/api/placeholder/400/300"
         },
         {
             id: 2,
-            src: "https://osdemscnc.com/wp-content/uploads/2025/02/servicios-video-2.mp4",
+            src: "/servicios-video-2.mp4",
             poster: "/api/placeholder/400/300"
         },
         {
             id: 3,
-            src: "https://osdemscnc.com/wp-content/uploads/2025/02/servicios-video-3.mp4",
+            src: "/servicios-video-3.mp4",
             poster: "/api/placeholder/400/300"
         }
     ];
@@ -65,6 +65,8 @@ const VideoCarousel = () => {
                                     <source src={video.src} type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>
+                                {/* Play button overlay removido */}
+                                {/* 
                                 <div className={styles.videoOverlay}>
                                     <div className={styles.playButton}>
                                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -72,6 +74,7 @@ const VideoCarousel = () => {
                                         </svg>
                                     </div>
                                 </div>
+                                */}
                             </div>
                         ))}
                     </div>

@@ -56,14 +56,7 @@ const Header = () => {
         },
         navigation: [
             { text: 'HOME', href: '/' },
-            {
-                text: 'COMPANY',
-                href: '/nosotros',
-                hasDropdown: true,
-                dropdownItems: [
-                    { text: 'ABOUT US', href: '/nosotros' }
-                ]
-            },
+            { text: 'ABOUT US', href: '/nosotros' },
             { text: 'SERVICES', href: '/servicios' },
             { text: 'AMR', href: '/amr' },
             { text: 'INDUSTRIES', href: '/industries' },
