@@ -1,6 +1,6 @@
 /* Hero Slider Styles */
 .hero {
-  height: 100vh;
+  height: 120vh;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -755,7 +755,7 @@
 }
 
 .heroTitle {
-  font-size: clamp(1.5rem, 3.8vw, 2.8rem);
+  font-size: clamp(2.1rem, 5.3vw, 3.9rem);
   font-weight: 900;
   margin-top: 70px;
   margin-bottom: 30px;
@@ -935,9 +935,9 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 100px 15px 30px;
+    padding: 100px 15px 50px;
     height: auto;
-    min-height: 100vh;
+    min-height: 120vh;
   }
   
   .heroContent {
@@ -945,7 +945,7 @@
   }
 
   .heroTitle {
-    font-size: clamp(2rem, 6vw, 2.8rem);
+    font-size: clamp(2.8rem, 8.4vw, 3.9rem);
     line-height: 1.2;
     margin-bottom: 20px;
   }
@@ -999,16 +999,16 @@
 
 @media (max-width: 480px) {
   .hero {
-    padding: 80px 10px 25px;
+    padding: 80px 10px 40px;
   }
   
   .heroContent {
     padding: 0 10px;
-    min-height: 50vh;
+    min-height: 70vh;
   }
 
   .heroTitle {
-    font-size: clamp(1.8rem, 8vw, 2.2rem);
+    font-size: clamp(2.5rem, 11.2vw, 3.1rem);
     line-height: 1.25;
     margin-bottom: 18px;
     padding: 0 5px;
