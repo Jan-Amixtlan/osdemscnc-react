@@ -78,21 +78,21 @@ const AboutUs = () => {
             <div className={styles.gallerySlider}>
               <div className={styles.gallerySlide}>
                 <img 
-                  src="https://osdemscnc.com/wp-content/uploads/2024/12/kndckhnchc9.png" 
+                  src="/AboutUsCarrucel1.png" 
                   alt="CNC Workshop"
                   className={styles.galleryImage}
                 />
               </div>
               <div className={styles.gallerySlide}>
                 <img 
-                  src="https://osdemscnc.com/wp-content/uploads/2024/12/j3bjkdb3d.png" 
+                  src="/AboutUsCarrucel2.png" 
                   alt="Precision Machining"
                   className={styles.galleryImage}
                 />
               </div>
               <div className={styles.gallerySlide}>
                 <img 
-                  src="https://osdemscnc.com/wp-content/uploads/2024/12/mxkcoc.png" 
+                  src="AboutUsCarrucel3.png" 
                   alt="Quality Control"
                   className={styles.galleryImage}
                 />
