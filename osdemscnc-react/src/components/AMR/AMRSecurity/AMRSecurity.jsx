@@ -3,7 +3,18 @@ import styles from './AMRSecurity.module.css';
 
 const AMRSecurity = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [videoError, setVideoError] = useState(false);
   const sectionRef = useRef(null);
+
+  const handleVideoError = (e) => {
+    console.error('Error loading video:', e);
+    setVideoError(true);
+  };
+
+  const handleVideoLoad = () => {
+    console.log('Video loaded successfully');
+    setVideoError(false);
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -32,30 +43,56 @@ const AMRSecurity = () => {
           {/* Mobile Video */}
           <div className={styles.videoContainerMobile}>
             <div className={styles.videoWrapper}>
-              <video 
-                className={styles.securityVideo}
-                controls
-                playsInline
-                preload="metadata"
-              >
-                <source src="https://osdemscnc.com/wp-content/uploads/2025/02/Feel-the-flow-of-automation-Autonomous-mobile-robotics-by-KUKA-KUKA-Robots-Automation-1080p-h264.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              {!videoError ? (
+                <video 
+                  className={styles.securityVideo}
+                  controls
+                  playsInline
+                  preload="metadata"
+                  onError={handleVideoError}
+                  onLoadedData={handleVideoLoad}
+                  width="100%"
+                  height="auto"
+                >
+                  <source src="/Video.mp4" type="video/mp4" />
+                  <source src="./Video.mp4" type="video/mp4" />
+                  <source src="../../../public/Video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              ) : (
+                <div className={styles.videoPlaceholder}>
+                  <p>Error loading video. Please check the video file.</p>
+                  <p>Expected path: /Video.mp4</p>
+                </div>
+              )}
             </div>
           </div>
           
           {/* Desktop Carousel */}
           <div className={styles.carouselSection}>
             <div className={styles.videoWrapper}>
-              <video 
-                className={styles.securityVideo}
-                controls
-                playsInline
-                preload="metadata"
-              >
-                <source src="https://osdemscnc.com/wp-content/uploads/2025/02/Feel-the-flow-of-automation-Autonomous-mobile-robotics-by-KUKA-KUKA-Robots-Automation-1080p-h264.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              {!videoError ? (
+                <video 
+                  className={styles.securityVideo}
+                  controls
+                  playsInline
+                  preload="metadata"
+                  onError={handleVideoError}
+                  onLoadedData={handleVideoLoad}
+                  width="100%"
+                  height="auto"
+                >
+                  <source src="/Video.mp4" type="video/mp4" />
+                  <source src="./Video.mp4" type="video/mp4" />
+                  <source src="../../../public/Video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              ) : (
+                <div className={styles.videoPlaceholder}>
+                  <p>Error loading video. Please check the video file.</p>
+                  <p>Expected path: /Video.mp4</p>
+                </div>
+              )}
               <div className={styles.videoOverlay}>
                 <div className={styles.overlayText}>
                   <h3>Advanced Security Technology</h3>
