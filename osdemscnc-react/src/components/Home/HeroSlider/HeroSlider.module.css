@@ -48,7 +48,7 @@
   position: absolute;
   width: 6px;
   height: 6px;
-  background: radial-gradient(circle, rgba(219, 39, 119, 0.9) 0%, rgba(168, 85, 247, 0.7) 100%);
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.9) 0%, rgba(34, 197, 94, 0.7) 100%);
   border-radius: 50%;
   animation: particleDance 20s infinite ease-in-out;
 }
@@ -58,20 +58,20 @@
   left: 8%;
   animation-delay: 0s;
   box-shadow: 
-    0 0 20px rgba(219, 39, 119, 0.7),
-    25px 35px 0 3px rgba(168, 85, 247, 0.6),
+    0 0 20px rgba(59, 130, 246, 0.7),
+    25px 35px 0 3px rgba(34, 197, 94, 0.6),
     50px -15px 0 2px rgba(59, 130, 246, 0.5),
     -30px 60px 0 4px rgba(16, 185, 129, 0.6),
-    -15px -25px 0 2px rgba(245, 101, 101, 0.7),
-    75px 15px 0 3px rgba(139, 92, 246, 0.5),
-    -45px -35px 0 2px rgba(236, 72, 153, 0.4),
+    -15px -25px 0 2px rgba(6, 182, 212, 0.7),
+    75px 15px 0 3px rgba(14, 165, 233, 0.5),
+    -45px -35px 0 2px rgba(3, 105, 161, 0.4),
     95px 75px 0 3px rgba(34, 197, 94, 0.6),
-    -70px 25px 0 2px rgba(251, 113, 133, 0.5),
-    35px -50px 0 4px rgba(147, 51, 234, 0.4),
-    120px -20px 0 2px rgba(244, 63, 94, 0.6),
+    -70px 25px 0 2px rgba(56, 189, 248, 0.5),
+    35px -50px 0 4px rgba(30, 58, 138, 0.4),
+    120px -20px 0 2px rgba(59, 130, 246, 0.6),
     -90px 80px 0 3px rgba(99, 102, 241, 0.5),
-    60px 100px 0 2px rgba(236, 72, 153, 0.4),
-    -25px -60px 0 3px rgba(168, 85, 247, 0.6),
+    60px 100px 0 2px rgba(3, 105, 161, 0.4),
+    -25px -60px 0 3px rgba(34, 197, 94, 0.6),
     110px 40px 0 2px rgba(34, 197, 94, 0.5);
 }
 
@@ -80,20 +80,20 @@
   right: 10%;
   animation-delay: 10s;
   box-shadow: 
-    0 0 18px rgba(168, 85, 247, 0.8),
+    0 0 18px rgba(34, 197, 94, 0.8),
     -35px -25px 0 2px rgba(59, 130, 246, 0.6),
     30px 45px 0 3px rgba(16, 185, 129, 0.7),
-    -20px -50px 0 2px rgba(245, 101, 101, 0.5),
-    55px -10px 0 4px rgba(219, 39, 119, 0.6),
-    -60px 30px 0 2px rgba(139, 92, 246, 0.4),
-    15px -70px 0 3px rgba(236, 72, 153, 0.7),
+    -20px -50px 0 2px rgba(6, 182, 212, 0.5),
+    55px -10px 0 4px rgba(59, 130, 246, 0.6),
+    -60px 30px 0 2px rgba(14, 165, 233, 0.4),
+    15px -70px 0 3px rgba(3, 105, 161, 0.7),
     -85px -15px 0 2px rgba(34, 197, 94, 0.5),
-    40px 80px 0 3px rgba(251, 113, 133, 0.6),
-    -40px -80px 0 2px rgba(147, 51, 234, 0.4),
-    90px -40px 0 3px rgba(244, 63, 94, 0.7),
+    40px 80px 0 3px rgba(56, 189, 248, 0.6),
+    -40px -80px 0 2px rgba(30, 58, 138, 0.4),
+    90px -40px 0 3px rgba(59, 130, 246, 0.7),
     -65px 60px 0 2px rgba(99, 102, 241, 0.5),
-    20px -30px 0 4px rgba(236, 72, 153, 0.6),
-    -100px 10px 0 2px rgba(168, 85, 247, 0.4),
+    20px -30px 0 4px rgba(3, 105, 161, 0.6),
+    -100px 10px 0 2px rgba(34, 197, 94, 0.4),
     70px 25px 0 3px rgba(34, 197, 94, 0.7);
 }
 
@@ -117,11 +117,11 @@
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at 15% 25%, rgba(219, 39, 119, 0.08) 0%, transparent 30%),
-    radial-gradient(circle at 85% 75%, rgba(168, 85, 247, 0.06) 0%, transparent 35%),
+    radial-gradient(circle at 15% 25%, rgba(59, 130, 246, 0.08) 0%, transparent 30%),
+    radial-gradient(circle at 85% 75%, rgba(34, 197, 94, 0.06) 0%, transparent 35%),
     radial-gradient(circle at 45% 15%, rgba(59, 130, 246, 0.04) 0%, transparent 25%),
     radial-gradient(circle at 75% 45%, rgba(16, 185, 129, 0.05) 0%, transparent 30%),
-    radial-gradient(circle at 25% 85%, rgba(245, 101, 101, 0.07) 0%, transparent 25%);
+    radial-gradient(circle at 25% 85%, rgba(6, 182, 212, 0.07) 0%, transparent 25%);
   z-index: 1;
   animation: lightThemeFloat 20s ease-in-out infinite;
 }
@@ -130,23 +130,23 @@
 .light .particleBackground::before,
 .light .particleBackground::after {
   background: linear-gradient(45deg, 
-    rgba(219, 39, 119, 0.8), 
-    rgba(168, 85, 247, 0.9), 
+    rgba(59, 130, 246, 0.8), 
+    rgba(34, 197, 94, 0.9), 
     rgba(59, 130, 246, 0.7),
     rgba(16, 185, 129, 0.8),
-    rgba(245, 101, 101, 0.9)
+    rgba(6, 182, 212, 0.9)
   );
   box-shadow: 
-    0 0 15px rgba(219, 39, 119, 0.6),
-    30px 40px 0 rgba(168, 85, 247, 0.5),
+    0 0 15px rgba(59, 130, 246, 0.6),
+    30px 40px 0 rgba(34, 197, 94, 0.5),
     60px -20px 0 rgba(59, 130, 246, 0.4),
     -40px 70px 0 rgba(16, 185, 129, 0.5),
-    -20px -30px 0 rgba(245, 101, 101, 0.6),
-    80px 10px 0 rgba(219, 39, 119, 0.4),
-    -60px -40px 0 rgba(168, 85, 247, 0.3),
+    -20px -30px 0 rgba(6, 182, 212, 0.6),
+    80px 10px 0 rgba(59, 130, 246, 0.4),
+    -60px -40px 0 rgba(34, 197, 94, 0.3),
     100px 80px 0 rgba(59, 130, 246, 0.5),
     -80px 20px 0 rgba(16, 185, 129, 0.4),
-    40px -60px 0 rgba(245, 101, 101, 0.3);
+    40px -60px 0 rgba(6, 182, 212, 0.3);
 }
 
 .light .heroTitle {
@@ -172,7 +172,7 @@
   border-top: 1px solid rgba(255, 255, 255, 0.8);
   box-shadow: 
     0 12px 30px rgba(0, 0, 0, 0.1),
-    0 0 25px rgba(219, 39, 119, 0.15),
+    0 0 25px rgba(59, 130, 246, 0.15),
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
   animation: cardFloat 8s ease-in-out infinite;
   position: relative;
@@ -188,8 +188,8 @@
   height: 100%;
   background: linear-gradient(90deg, 
     transparent, 
-    rgba(219, 39, 119, 0.1),
-    rgba(168, 85, 247, 0.1),
+    rgba(59, 130, 246, 0.1),
+    rgba(34, 197, 94, 0.1),
     transparent
   );
   transition: left 0.6s ease;
@@ -201,11 +201,11 @@
 
 .light .statCard:nth-child(1) { 
   animation-delay: 0s; 
-  border-left: 3px solid rgba(219, 39, 119, 0.6);
+  border-left: 3px solid rgba(59, 130, 246, 0.6);
 }
 .light .statCard:nth-child(2) { 
   animation-delay: 2s; 
-  border-left: 3px solid rgba(168, 85, 247, 0.6);
+  border-left: 3px solid rgba(34, 197, 94, 0.6);
 }
 .light .statCard:nth-child(3) { 
   animation-delay: 4s; 
@@ -226,14 +226,14 @@
 
 /* Individual stat colors for better visual appeal */
 .light .statCard:nth-child(1) .statNumber {
-  background: linear-gradient(45deg, #db2777, #e879f9, #f472b6);
+  background: linear-gradient(45deg, #3b82f6, #60a5fa, #93c5fd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .light .statCard:nth-child(2) .statNumber {
-  background: linear-gradient(45deg, #a855f7, #8b5cf6, #7c3aed);
+  background: linear-gradient(45deg, #22c55e, #4ade80, #86efac);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -492,9 +492,9 @@
 
 .light .particleBackground {
   background:
-    radial-gradient(circle at 20% 50%, rgba(255, 62, 150, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(138, 43, 226, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 40% 80%, rgba(255, 20, 147, 0.08) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(34, 197, 94, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(6, 182, 212, 0.08) 0%, transparent 50%);
   animation: particleFloat 20s ease-in-out infinite;
 }
 
@@ -672,15 +672,15 @@
 }
 
 .light .shape1 {
-  background: rgba(255, 62, 150, 0.1);
+  background: rgba(59, 130, 246, 0.1);
 }
 
 .light .shape2 {
-  background: rgba(138, 43, 226, 0.1);
+  background: rgba(34, 197, 94, 0.1);
 }
 
 .light .shape3 {
-  background: rgba(255, 20, 147, 0.1);
+  background: rgba(6, 182, 212, 0.1);
 }
 
 .teal .shape1 {
@@ -1131,14 +1131,14 @@
     transform: translateY(0) scale(1) rotateX(0deg); 
     box-shadow: 
       0 12px 30px rgba(0, 0, 0, 0.1),
-      0 0 25px rgba(219, 39, 119, 0.15),
+      0 0 25px rgba(59, 130, 246, 0.15),
       inset 0 1px 0 rgba(255, 255, 255, 0.3);
   }
   33% { 
     transform: translateY(-15px) scale(1.03) rotateX(2deg); 
     box-shadow: 
       0 20px 40px rgba(0, 0, 0, 0.15),
-      0 0 35px rgba(168, 85, 247, 0.25),
+      0 0 35px rgba(34, 197, 94, 0.25),
       inset 0 1px 0 rgba(255, 255, 255, 0.4);
   }
   66% { 
