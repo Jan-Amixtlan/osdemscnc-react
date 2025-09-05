@@ -19,7 +19,7 @@ const AboutUs = () => {
           </div>
           <div className={styles.heroSlide}>
             <img 
-              src="https://osdemscnc.com/wp-content/uploads/2024/09/cnc2.jpg" 
+              src="/AboutUs2.jpg" 
               alt="Business and Machines"
               className={styles.heroImage}
             />
@@ -29,7 +29,7 @@ const AboutUs = () => {
           </div>
           <div className={styles.heroSlide}>
             <img 
-              src="https://osdemscnc.com/wp-content/uploads/2024/12/trabajo.jpg" 
+              src="/AboutUs3.jpg" 
               alt="Machines"
               className={styles.heroImage}
             />
