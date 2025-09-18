@@ -5,6 +5,75 @@ import styles from './ArticleDetail.module.css';
 const ArticleDetail = () => {
     const { id } = useParams();
 
+    // Función para convertir markdown de tabla a HTML
+    const parseContent = (content) => {
+        // Detectar si el contenido contiene una tabla markdown
+        if (content.includes('|') && content.includes('---')) {
+            const lines = content.split('\n');
+            let tableHtml = '';
+            let inTable = false;
+            let regularContent = [];
+
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
+
+                if (line.includes('|') && line !== '' && !inTable) {
+                    // Inicio de tabla
+                    inTable = true;
+                    tableHtml += '<table>';
+
+                    // Header row
+                    const headers = line.split('|').map(h => h.trim()).filter(h => h !== '');
+                    tableHtml += '<thead><tr>';
+                    headers.forEach(header => {
+                        tableHtml += `<th>${header}</th>`;
+                    });
+                    tableHtml += '</tr></thead><tbody>';
+
+                    // Skip separator line
+                    i++;
+                } else if (line.includes('|') && inTable) {
+                    // Data row
+                    const cells = line.split('|').map(c => c.trim()).filter(c => c !== '');
+                    tableHtml += '<tr>';
+                    cells.forEach(cell => {
+                        // Procesar markdown básico en celdas (negrita)
+                        const processedCell = cell.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                                                 .replace(/<br>/g, '<br/>');
+                        tableHtml += `<td>${processedCell}</td>`;
+                    });
+                    tableHtml += '</tr>';
+                } else if (inTable && (line === '' || !line.includes('|'))) {
+                    // Fin de tabla
+                    inTable = false;
+                    tableHtml += '</tbody></table>';
+                    regularContent.push({ type: 'table', content: tableHtml });
+                    tableHtml = '';
+
+                    if (line !== '') {
+                        regularContent.push({ type: 'paragraph', content: line });
+                    }
+                } else if (!inTable) {
+                    // Contenido regular
+                    if (line !== '') {
+                        regularContent.push({ type: 'paragraph', content: line });
+                    }
+                }
+            }
+
+            // Si terminamos en tabla
+            if (inTable) {
+                tableHtml += '</tbody></table>';
+                regularContent.push({ type: 'table', content: tableHtml });
+            }
+
+            return regularContent;
+        } else {
+            // Contenido regular sin tablas
+            return content.split('\n').map(line => ({ type: 'paragraph', content: line }));
+        }
+    };
+
     // Datos de los artículos (puedes mover esto a un contexto o archivo separado)
     const articles = {
         1: {
@@ -125,16 +194,16 @@ const ArticleDetail = () => {
                         content: "1. Eficiencia Operativa y Productividad\n•	Reducción de tiempos de ciclo mediante flujos continuos y sincronizados.\n•	Minimización de errores humanos en operaciones repetitivas o de alta precisión.\n•	Optimización de recursos (mano de obra, energía, materiales) a través de control adaptativo.\n2. Calidad y Trazabilidad\n•	Consistencia en outputs mediante parámetros controlados y repetibles.\n•	Registro automático de datos (lotes, serial numbers, mediciones) para cumplimiento normativo.\n•	Detección temprana de desviaciones con sistemas de inspección in-line.\n3. Seguridad y Ergonomía\n•	Reducción de riesgos laborales en operaciones peligrosas (manejo de químicos, cargas pesadas).\n•	Ambientes controlados para procesos críticos (salas limpias, atmósferas inertes.\nEscalabilidad y Flexibilidad\n•	Sistemas modulares que adaptan capacidad según demanda.\n•	Reconfiguración rápida para cambios de producto o volúmenes."
                     },
                     {
-                        title: "",
-                        content: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                        title: "⚙️ Funcionamiento y Estructura de Sistemas Clave",
+                        content: "1. Bandas Transportadoras Automatizadas\n•	Función: Movimiento coordinado de materiales entre estaciones de proceso\n•	Estructura:\no	Actuadores: Motores AC/DC, servomotores para control de velocidad y posición.\no	Sensores: Fotoeléctricos, inductivos, codificadores para tracking de productos.\no	Control: PLCs y HMIs para gestión de rutas, acumulación y sincronización.\n•	Integración: Con sistemas de clasificación, pesaje y empaque.\n2. Estaciones de Rework Automatizadas\n•	Función: Corrección automatizada de defectos en PCBs o componentes.\n•	Estructura:\no	Sistemas de visión: Cámaras de alta resolución para identificación de fallas.\no	Brazo robótico: Para remoción/colocación de componentes (SMD, THT).\no	Estación de soldadura: Hot air, IR o láser para resoldadura precisa.\n•	Integración: Con ICT/FT feeders para diagnóstico y reparación.\n3. Mesas de Retrabajo y Reparación\n•	Función: Intervención semi-automatizada para prototipos o lotes pequeños.\n•	Estructura:\no	Posicionadores multi-eje: Para manipulación precisa de assemblies.\no	Herramientas intercambiables: Soldadoras, dispensadores, extractores.\no	Interfaz ergonómica: Pantallas táctiles, ayudas visuales (VR/AR).\n•	Integración: Con bancos de prueba y documentación digital (MES/ERP).\n\n| Sistema | Función Principal | Componentes Críticos | Nivel de Automatización |\n|---------|---------|---------------------|-------------|\n| **Bandas Transportadoras** | Movimiento de materiales | Motores, sensores, PLCs | Alta (completamente automático) |\n| **Estaciones de Rework** | Corrección de defectos | Visión artificial, robots, soldadura | Media-Alta (supervisión mínima) |\n| **Mesas de Reparación** | Intervención precisa | Posicionadores, herramientas, HMI | Media (operador asistido) | \n Tabla 1: Comparativa de Sistemas de Automatización Clave"
                     },
                     {
-                        title: "",
-                        content: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                        title: "🏗️ Claves para Integración Exitosa",
+                        content: "1. Diseño Centrado en Procesos\n•	Análisis de flujos: Identificación de cuellos de botella y oportunidades.\n•	Simulación digital: Emulación de operaciones para optimizar layouts (Digital Twin).\n2. Selección de Tecnologías\n•	Escalabilidad: Componentes modulares que permitan expansión futura.\n•	Interoperabilidad: Protocolos estándar (OPC UA, EtherCAT) para conectividad.\n3. Implementación por Etapas\n•	Pilotos controlados: Validación progresiva de funcionalidades.\n•	Migración gradual: Minimización de disrupciones operativas durante instalación.\n4. Capacitación Temprana\n•	Involucramiento de usuarios: Operarios y técnicos en fases de diseño y prueba.\n•	Training en tecnologías específicas: Programación PLC, robótica, HMI."
                     },
                     {
-                        title: "",
-                        content: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                        title: "🏭 Aplicaciones Industriales vs. Médicas",
+                        content: "1. Entornos Industriales\n•	Automotriz: Ensamble de componentes, testing de motores, pintura.\n•	Electrónica: Populación de PCBs, soldadura, inspección AOI.\n•	Alimentos: Empaque, paletización, control de calidad.\n2. Entornos Médicos\n•	Dispositivos Médicos: Manufactura de implants, instrumental quirúrgico.\n•	Farmacéutica: Llenado estéril, inspección de viales, packaging.\n•	Laboratorios: Manipulación de muestras, análisis automatizado.\n\n| Parámetro | Entorno Industrial | Entorno Médico |\n|---------------|--------------|---------------------|\n| **Precisión** | ±0.1 mm (typical) | ±0.01 mm (critical) |\n| **Trazabilidad** | Lote, serial number | UDI (Unique Device Identification), lote, paciente |\n| **Ambiente** | IP54, resistente a polvo | Salas limpias (ISO 5-8), esterilidad |\n| **Cumplimiento Normativo** | ISO 9001, IATF 16949 | ISO 13485, FDA 21 CFR Part 820, GMP |\n| **Limpieza/Mantenimiento** | Limpieza general | Desinfección, validación de limpieza | \n Tabla 2: Requerimientos Específicos por Sector"
                     },
                     {
                         title: "",
@@ -258,8 +327,12 @@ const ArticleDetail = () => {
                             <div key={index} className={styles.section}>
                                 <h2 className={styles.sectionTitle}>{section.title}</h2>
                                 <div className={styles.sectionContent}>
-                                    {section.content.split('\n').map((paragraph, pIndex) => (
-                                        <p key={pIndex}>{paragraph}</p>
+                                    {parseContent(section.content).map((item, pIndex) => (
+                                        item.type === 'table' ? (
+                                            <div key={pIndex} dangerouslySetInnerHTML={{ __html: item.content }} />
+                                        ) : (
+                                            <p key={pIndex}>{item.content}</p>
+                                        )
                                     ))}
                                 </div>
                             </div>
