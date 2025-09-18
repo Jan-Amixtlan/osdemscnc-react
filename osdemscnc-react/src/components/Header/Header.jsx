@@ -20,10 +20,10 @@ const Header = () => {
                 setIsMobileMenuOpen(false);
             }
         };
-        
+
         checkScreenSize();
         window.addEventListener('resize', checkScreenSize);
-        
+
         return () => window.removeEventListener('resize', checkScreenSize);
     }, []);
 
@@ -34,7 +34,7 @@ const Header = () => {
         } else {
             document.body.style.overflow = 'unset';
         }
-        
+
         return () => {
             document.body.style.overflow = 'unset';
         };
@@ -56,11 +56,12 @@ const Header = () => {
         },
         navigation: [
             { text: 'HOME', href: '/' },
-            { text: 'ABOUT US', href: '/nosotros' },
+            { text: 'ABOUT_US', href: '/nosotros' },
             { text: 'SERVICES', href: '/servicios' },
             { text: 'AMR', href: '/amr' },
             { text: 'INDUSTRIES', href: '/industries' },
-          
+            { text: 'ARTICLES', href: '/articles' },
+
         ],
         social: [
             { platform: 'Facebook', url: 'https://www.facebook.com/osdemsmaquinados?mibextid=JRoKGi', icon: 'fab fa-facebook-f' },
@@ -109,7 +110,7 @@ const Header = () => {
                         />
 
                         {/* Botón menú hamburguesa para móvil */}
-                        <button 
+                        <button
                             className={styles.mobileMenuButton}
                             onClick={toggleMobileMenu}
                             aria-label="Menú de navegación"
@@ -119,7 +120,7 @@ const Header = () => {
                             <span className={`${styles.hamburgerLine} ${isMobileMenuOpen ? styles.hamburgerActive : ''}`}></span>
                         </button>
 
-                        
+
                     </div>
                 </div>
             </div>
@@ -133,17 +134,17 @@ const Header = () => {
             <div className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
                 <div className={styles.mobileMenuHeader}>
                     <img src="/osdems-cnc.png" alt="OSDEMS CNC" className={styles.mobileMenuLogo} />
-                    <button 
+                    <button
                         className={styles.mobileMenuClose}
                         onClick={closeMobileMenu}
                         aria-label="Cerrar menú"
                     >
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                            <path d="M18 6L6 18M6 6l12 12"/>
+                            <path d="M18 6L6 18M6 6l12 12" />
                         </svg>
                     </button>
                 </div>
-                
+
                 <div className={styles.mobileMenuContent}>
                     <Navigation
                         items={data.navigation}
@@ -151,7 +152,7 @@ const Header = () => {
                         isMobile={true}
                         onItemClick={closeMobileMenu}
                     />
-                    
+
                     <div className={styles.mobileMenuFooter}>
                         <div className={styles.mobileContact}>
                             <h4>Contacto</h4>
@@ -162,7 +163,7 @@ const Header = () => {
                                 compact={false}
                             />
                         </div>
-                        
+
                         <div className={styles.mobileSocial}>
                             <h4>Síguenos</h4>
                             <SocialMedia

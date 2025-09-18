@@ -1,0 +1,985 @@
+/* InnovativeEvidenceSection.css */
+
+.innovative-evidence-section {
+    position: relative;
+    background:
+        radial-gradient(circle at 20% 80%, rgba(74, 144, 226, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(139, 69, 193, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(34, 197, 94, 0.1) 0%, transparent 50%),
+        linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0f0f1e 100%);
+    min-height: 100vh;
+    padding: 100px 0;
+    overflow: hidden;
+    color: #ffffff;
+    perspective: 1000px;
+}
+
+/* Fondo animado */
+.animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Formas geométricas flotantes */
+.geometric-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.floating-shape {
+    position: absolute;
+    background: linear-gradient(45deg, rgba(74, 144, 226, 0.1), rgba(139, 69, 193, 0.1));
+    backdrop-filter: blur(1px);
+    animation: float 15s infinite linear;
+}
+
+.shape-1 {
+    width: 80px;
+    height: 80px;
+    top: 10%;
+    left: 10%;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.shape-2 {
+    width: 60px;
+    height: 60px;
+    top: 20%;
+    right: 15%;
+    border-radius: 50%;
+}
+
+.shape-3 {
+    width: 100px;
+    height: 100px;
+    top: 60%;
+    left: 5%;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.shape-4 {
+    width: 40px;
+    height: 40px;
+    top: 80%;
+    right: 20%;
+    transform: rotate(45deg);
+}
+
+.shape-5 {
+    width: 70px;
+    height: 70px;
+    top: 30%;
+    left: 80%;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.shape-6 {
+    width: 90px;
+    height: 90px;
+    top: 70%;
+    right: 10%;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.shape-7 {
+    width: 50px;
+    height: 50px;
+    top: 40%;
+    left: 60%;
+    border-radius: 50%;
+}
+
+.shape-8 {
+    width: 120px;
+    height: 120px;
+    top: 85%;
+    left: 40%;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    opacity: 0.3;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.3;
+    }
+
+    25% {
+        transform: translateY(-20px) rotate(90deg);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translateY(-40px) rotate(180deg);
+        opacity: 0.3;
+    }
+
+    75% {
+        transform: translateY(-20px) rotate(270deg);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateY(0px) rotate(360deg);
+        opacity: 0.3;
+    }
+}
+
+/* Grid holográfico */
+.holographic-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1;
+}
+
+.grid-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.horizontal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: repeating-linear-gradient(0deg,
+            transparent 0px,
+            transparent 49px,
+            rgba(74, 144, 226, 0.1) 50px);
+    animation: gridMove 20s linear infinite;
+}
+
+.vertical::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: repeating-linear-gradient(90deg,
+            transparent 0px,
+            transparent 49px,
+            rgba(74, 144, 226, 0.1) 50px);
+    animation: gridMove 25s linear infinite reverse;
+}
+
+@keyframes gridMove {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(50px, 50px);
+    }
+}
+
+/* Luz dinámica */
+.dynamic-light {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(74, 144, 226, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(80px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+/* Contenedor principal */
+.innovative-container {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    z-index: 10;
+}
+
+/* Header innovador */
+.innovative-header {
+    text-align: center;
+    margin-bottom: 80px;
+    perspective: 1000px;
+}
+
+.title-container {
+    margin-bottom: 40px;
+}
+
+.innovative-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 0;
+    transform-style: preserve-3d;
+}
+
+.title-word,
+.title-highlight,
+.title-main,
+.title-glow {
+    display: inline-block;
+    position: relative;
+    margin: 0 0.2em;
+    animation: titleReveal 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(50px) rotateX(-90deg);
+}
+
+.title-word {
+    color: #e5e7eb;
+    animation-delay: calc(var(--word-index, 0) * 0.1s);
+}
+
+.title-highlight {
+    background: linear-gradient(135deg, #4ade80 0%, #22d3ee 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation-delay: calc(var(--word-index, 0) * 0.1s);
+    position: relative;
+}
+
+.title-highlight::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, #4ade80 0%, #22d3ee 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: blur(10px);
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.title-main {
+    color: #ffffff;
+    animation-delay: 0.6s;
+}
+
+.title-glow {
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #fb7185 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation-delay: 0.8s;
+    position: relative;
+}
+
+.title-glow::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #fb7185 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: blur(20px);
+    opacity: 0.8;
+    z-index: -1;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes titleReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0) rotateX(0);
+    }
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.02);
+    }
+}
+
+/* Subtítulo */
+.subtitle-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.innovative-subtitle {
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    line-height: 1.6;
+    color: #d1d5db;
+    font-weight: 400;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 1s forwards;
+}
+
+.accent-line {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #4ade80, #22d3ee);
+    margin: 0 auto;
+    border-radius: 2px;
+    opacity: 0;
+    animation: lineExpand 1s ease-out 1.2s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes lineExpand {
+    to {
+        opacity: 1;
+        width: 120px;
+    }
+}
+
+/* Grid innovador */
+.innovative-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+/* Tarjetas innovadoras */
+.innovative-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    cursor: pointer;
+    transform-style: preserve-3d;
+    animation: cardReveal 0.8s ease-out forwards;
+    animation-delay: var(--animation-delay);
+    opacity: 0;
+    transform: translateY(100px) rotateX(-15deg);
+}
+
+@keyframes cardReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0) rotateX(0);
+    }
+}
+
+.innovative-card:hover {
+    transform: translateY(-15px) rotateX(5deg) rotateY(5deg);
+    border-color: var(--card-color);
+    box-shadow:
+        0 30px 60px -12px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(var(--card-color), 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.innovative-card.active .card-hologram {
+    opacity: 0.6;
+}
+
+/* Efecto holográfico */
+.card-hologram {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg,
+            transparent 30%,
+            rgba(255, 255, 255, 0.1) 50%,
+            transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transform: translateX(-100%);
+    animation: hologramScan 3s ease-in-out infinite;
+}
+
+@keyframes hologramScan {
+
+    0%,
+    100% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(100%);
+    }
+}
+
+/* Imagen con efectos */
+.card-image-wrapper {
+    position: relative;
+    height: 280px;
+}
+
+.card-image-container {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.6s ease;
+    filter: grayscale(0.3) contrast(1.1);
+}
+
+.innovative-card:hover .card-image {
+    transform: scale(1.08) rotate(1deg);
+    filter: grayscale(0) contrast(1.2);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.2) 0%,
+            transparent 50%,
+            rgba(var(--card-color), 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.innovative-card:hover .image-overlay {
+    opacity: 1;
+}
+
+/* Línea de escaneo */
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--card-color), transparent);
+    transform: translateY(-2px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.innovative-card:hover .scan-line {
+    opacity: 1;
+    animation: scanMove 2s ease-in-out infinite;
+}
+
+@keyframes scanMove {
+    0% {
+        transform: translateY(-2px);
+    }
+
+    50% {
+        transform: translateY(280px);
+    }
+
+    100% {
+        transform: translateY(-2px);
+    }
+}
+
+/* Badges flotantes */
+.floating-badges {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.year-badge,
+.category-badge {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.year-badge {
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--card-color);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.badge-icon {
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.category-badge {
+    background: rgba(var(--card-color), 0.1);
+    color: var(--card-color);
+    position: relative;
+}
+
+.badge-pulse {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    width: 6px;
+    height: 6px;
+    background: var(--card-color);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Contenido de la tarjeta */
+.card-content-wrapper {
+    position: relative;
+    padding: 30px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content-frame {
+    position: relative;
+}
+
+.card-title-innovative {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #f9fafb;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.title-background {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: linear-gradient(135deg, var(--card-color), transparent);
+    opacity: 0;
+    border-radius: 8px;
+    filter: blur(8px);
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.innovative-card:hover .title-background {
+    opacity: 0.1;
+}
+
+/* Botón futurista */
+.futuristic-button {
+    position: relative;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    padding: 12px 24px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.button-bg {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--card-color), transparent);
+    transition: left 0.5s ease;
+    opacity: 0.3;
+}
+
+.futuristic-button:hover .button-bg {
+    left: 100%;
+}
+
+.button-text {
+    position: relative;
+    z-index: 2;
+}
+
+.button-icon {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.futuristic-button:hover .button-icon {
+    transform: translateX(4px);
+}
+
+/* Partículas del botón */
+.button-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: var(--card-color);
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.futuristic-button:hover .particle {
+    animation: particleExplode 0.6s ease-out forwards;
+}
+
+.particle-1 {
+    top: 20%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.particle-2 {
+    top: 20%;
+    right: 20%;
+    animation-delay: 0.1s;
+}
+
+.particle-3 {
+    bottom: 20%;
+    left: 20%;
+    animation-delay: 0.2s;
+}
+
+.particle-4 {
+    bottom: 20%;
+    right: 20%;
+    animation-delay: 0.1s;
+}
+
+.particle-5 {
+    top: 50%;
+    left: 10%;
+    animation-delay: 0.05s;
+}
+
+.particle-6 {
+    top: 50%;
+    right: 10%;
+    animation-delay: 0.15s;
+}
+
+@keyframes particleExplode {
+    0% {
+        opacity: 1;
+        transform: scale(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0) translate(20px, -20px);
+    }
+}
+
+/* Indicador de progreso */
+.progress-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--card-color), rgba(var(--card-color), 0.5));
+    transition: width 0.3s ease;
+}
+
+.innovative-card:hover .progress-bar {
+    width: 100%;
+}
+
+/* Efectos adicionales */
+.card-glow {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: radial-gradient(circle, var(--glow-color), transparent);
+    opacity: 0;
+    filter: blur(30px);
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.innovative-card:hover .card-glow {
+    opacity: 0.2;
+}
+
+/* Acentos de esquina */
+.corner-accents {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.corner {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--card-color);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.top-left {
+    top: 20px;
+    left: 20px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.top-right {
+    top: 20px;
+    right: 20px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.bottom-left {
+    bottom: 20px;
+    left: 20px;
+    border-right: none;
+    border-top: none;
+}
+
+.bottom-right {
+    bottom: 20px;
+    right: 20px;
+    border-left: none;
+    border-top: none;
+}
+
+.innovative-card:hover .corner {
+    opacity: 0.6;
+}
+
+/* Indicador de scroll */
+.scroll-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    gap: 16px;
+    opacity: 0.7;
+}
+
+.scroll-line {
+    width: 2px;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, #60a5fa, transparent);
+    position: relative;
+}
+
+.scroll-dot {
+    width: 8px;
+    height: 8px;
+    background: #60a5fa;
+    border-radius: 50%;
+    animation: scrollPulse 2s ease-in-out infinite;
+}
+
+.scroll-text {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #9ca3af;
+}
+
+@keyframes scrollPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .innovative-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+    }
+
+    .innovative-evidence-section {
+        padding: 80px 0;
+    }
+
+    .card-image-wrapper {
+        height: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    .innovative-container {
+        padding: 0 16px;
+    }
+
+    .innovative-header {
+        margin-bottom: 60px;
+    }
+
+    .innovative-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-top: 40px;
+    }
+
+    .card-content-wrapper {
+        padding: 24px;
+        min-height: 180px;
+    }
+
+    .card-image-wrapper {
+        height: 200px;
+    }
+
+    .floating-badges {
+        top: 16px;
+        left: 16px;
+        right: 16px;
+    }
+
+    .year-badge,
+    .category-badge {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .innovative-evidence-section {
+        padding: 60px 0;
+    }
+
+    .innovative-container {
+        padding: 0 12px;
+    }
+
+    .innovative-title {
+        font-size: 2rem;
+    }
+
+    .innovative-subtitle {
+        font-size: 1rem;
+    }
+
+    .scroll-indicator {
+        margin-top: 60px;
+    }
+}
+
+/* Animaciones reducidas para accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+
+    .floating-shape,
+    .dynamic-light,
+    .grid-lines::before,
+    .scan-line,
+    .badge-icon,
+    .badge-pulse,
+    .scroll-dot {
+        animation: none;
+    }
+
+    .innovative-card:hover {
+        transform: translateY(-8px);
+    }
+
+    .innovative-card:hover .card-image {
+        transform: scale(1.05);
+    }
+}
+
+/* Estados de focus para accesibilidad */
+.futuristic-button:focus-visible {
+    outline: 2px solid var(--card-color);
+    outline-offset: 2px;
+}
+
+.innovative-card:focus-within {
+    border-color: var(--card-color);
+    box-shadow: 0 0 0 3px rgba(var(--card-color), 0.2);
+}

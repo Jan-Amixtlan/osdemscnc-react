@@ -7,6 +7,7 @@ import AMR from './pages/AMR/AMR';
 import Industries from './pages/Industries/Industries';
 import Services from './pages/Services/Services';
 import AboutUs from './pages/AboutUs/AboutUs';
+import Articles from './pages/Articles/Articles';
 import './styles/globals.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route path="/nosotros" element={<AboutUs />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/servicios" element={<Services />} />
+            <Route path="/articles" element={<Articles />} />
             <Route path="/productos" element={<div style={{padding: '100px 20px', textAlign: 'center'}}><h1>Página Productos</h1><p>En construcción...</p></div>} />
             <Route path="/galeria" element={<div style={{padding: '100px 20px', textAlign: 'center'}}><h1>Página Galería</h1><p>En construcción...</p></div>} />
             <Route path="/contacto" element={<div style={{padding: '100px 20px', textAlign: 'center'}}><h1>Página Contacto</h1><p>En construcción...</p></div>} />
