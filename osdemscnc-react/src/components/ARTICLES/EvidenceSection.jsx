@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './EvidenceSection.css';
 
 const EvidenceSection = () => {
+    const navigate = useNavigate();
     const [activeCard, setActiveCard] = useState(null);
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -12,44 +14,44 @@ const EvidenceSection = () => {
             year: "2025",
             image: "/ICT.jpg",
             category: "ICT",
-            color: "#4ade80",
-            gradient: "from-emerald-500 to-teal-400"
+            color: "#2563eb",
+            gradient: "from-blue-600 to-blue-400"
         },
         {
             id: 2,
             title: "Importancia, Funcionamiento y Claves de la Integración del FT (Functional Test) ",
             year: "2025",
-            image: "/images/supplement-label-guide.jpg",
+            image: "/FT.jpg",
             category: "FT",
-            color: "#60a5fa",
-            gradient: "from-blue-500 to-cyan-400"
+            color: "#009393",
+            gradient: "from-teal-600 to-teal-400"
         },
         {
             id: 3,
             title: "Automatización Industrial y Médica",
             year: "2025",
-            image: "/images/cofepris-regulation.jpg",
+            image: "Automatizacion.jpg",
             category: "Automatización",
-            color: "#a78bfa",
-            gradient: "from-purple-500 to-pink-400"
+            color: "#20b9db",
+            gradient: "from-cyan-500 to-cyan-300"
         },
         {
             id: 4,
             title: "¿Por Qué los AMRs Son Clave Hoy?",
             year: "2025",
-            image: "/images/branded-vs-generic.jpg",
+            image: "/AMR.jpg",
             category: "AMRs",
-            color: "#fb7185",
-            gradient: "from-rose-500 to-orange-400"
+            color: "#1e40af",
+            gradient: "from-blue-700 to-blue-500"
         },
         {
             id: 5,
             title: "Precisión Absoluta- El Arte y Ciencia detrás de las Fixturas ICT",
             year: "2025",
-            image: "/images/branded-vs-generic.jpg",
+            image: "/Fixturas.jpg",
             category: "Precisión",
-            color: "#fb7185",
-            gradient: "from-rose-500 to-orange-400"
+            color: "#f59e0b",
+            gradient: "from-amber-500 to-yellow-400"
         }
     ];
 
@@ -64,6 +66,10 @@ const EvidenceSection = () => {
         window.addEventListener('mousemove', handleMouseMove);
         return () => window.removeEventListener('mousemove', handleMouseMove);
     }, []);
+
+    const handleExploreClick = (articleId) => {
+        navigate(`/articles/${articleId}`);
+    };
 
     return (
         <section className="innovative-evidence-section">
@@ -177,7 +183,10 @@ const EvidenceSection = () => {
                                     </h3>
 
                                     <div className="card-footer">
-                                        <button className="futuristic-button">
+                                        <button
+                                            className="futuristic-button"
+                                            onClick={() => handleExploreClick(item.id)}
+                                        >
                                             <span className="button-bg"></span>
                                             <span className="button-text">Explorar</span>
                                             <div className="button-icon">
