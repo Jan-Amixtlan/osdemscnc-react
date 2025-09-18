@@ -17,7 +17,7 @@ const ArticleDetail = () => {
                 introduction: "Importancia, Funcionamiento y Claves de la Integración del ICT (In-Circuit Test)",
                 sections: [
                     {
-                        title: "🔍ÍNDICE",
+                        title: "🔍Índice",
                         content: "1. Introducción al ICT\n2. Importancia del ICT en la Manufactura Electrónica\n3. Funcionamiento del Sistema ICT\n4. Estructura de un Sistema ICT\n5. Claves para una Integración Exitosa\n6. Importancia del Servicio PostVenta, Capacitación y Soporte\n7. OSDEMS CNC como Proveedor Integral"
                     },
                     {
@@ -62,23 +62,43 @@ const ArticleDetail = () => {
             image: "/FT.jpg",
             color: "#009393",
             content: {
-                introduction: "El Functional Test (FT) representa la etapa final de verificación en el proceso de manufactura electrónica, asegurando que el producto funcione según las especificaciones diseñadas.",
+                introduction: "Importancia, Funcionamiento y Claves de la Integración del FT (Functional Test)",
                 sections: [
                     {
-                        title: "Fundamentos del FT",
-                        content: "El Functional Test valida que el producto electrónico opere correctamente bajo condiciones reales de uso, verificando todas las funciones y características especificadas."
+                        title: "🔍 Índice",
+                        content: "1. Introducción al FT \n 2. Importancia del FT en la Manufactura Electrónica\n3. Funcionamiento del Sistema FT\n 4. Estructura de un Sistema FT\n 5. Claves para una Integración Exitosa\n 6. Importancia del Servicio PostVenta, Capacitación y Soporte \n 7. OSDEMS CNC como Proveedor Integral"
                     },
                     {
-                        title: "Diferencia con ICT",
-                        content: "Mientras el ICT verifica componentes individuales, el FT evalúa el funcionamiento integral del sistema completo, incluyendo interfaces, comunicaciones y rendimiento general."
+                        title: "📌 Introducción al FT",
+                        content: "El Functional Test (FT) o prueba funcional es un proceso de validación que verifica que una unidad bajo prueba (UUT) opere según las especificaciones de diseño y funcionalidad requeridas. A diferencia de las pruebas estructurales como el ICT, el FT simula las condiciones reales de operación para asegurar que el producto final cumpla con todas sus funciones previstas. Como proveedor de soluciones de manufactura avanzada, OSDEMS CNC (osdemscnc.com) ofrece sistemas FT integrados que garantizan la máxima calidad y funcionalidad en la producción electrónica."
                     },
                     {
-                        title: "Metodologías de Prueba",
-                        content: "Implementamos pruebas funcionales automatizadas que simulan condiciones reales de operación, incluyendo pruebas de estrés, temperatura y durabilidad."
+                        title: "💡 Importancia del FT en la Manufactura Electrónica",
+                        content: "1. Validación de funcionalidad completa\n •	Verifica que el producto opere correctamente en condiciones reales o simuladas, asegurando que cumpla con los requisitos del cliente y las normativas aplicables.\n •	Detecta fallas que las pruebas estructurales (como ICT) no pueden identificar, como errores de software, problemas de timing o interacciones entre componentes.\n 2. Garantía de calidad y confiabilidad del producto final\n •	Reduce el riesgo de fallas en campo, que son significativamente más costosas y pueden dañar la reputación de la marca. \n •	Especialmente crítico en industrias con altos estándares de calidad y seguridad como automotriz, aeroespacial, médica y dispositivos críticos.\n 3. Aseguramiento de la experiencia del usuario\n •	Valida no solo la funcionalidad eléctrica sino también aspectos mecánicos, de software y de interfaz de usuario.\n •	En productos complejos (ej: consolas, equipos médicos), el FT es la única forma de asegurar que todas las funciones interactúen correctamente.\n 4. Complemento esencial a otras pruebas\n •	Mientras el ICT verifica componentes individuales y conexiones, el FT valida el comportamiento integrado del sistema. \n •	Proporciona la última línea de defensa antes de que el producto sea embarcado al cliente final."
                     },
                     {
-                        title: "Impacto en Calidad",
-                        content: "• Validación completa del producto\n• Detección de fallas de diseño\n• Verificación de especificaciones\n• Garantía de rendimiento\n• Cumplimiento de estándares industriales"
+                        title: "⚙️ Funcionamiento del Sistema FT",
+                        content: "1. Principio básico\n•	El sistema FT aplica estímulos a la unidad bajo prueba (UUT) y mide las respuestas, comparándolas con los valores esperados según las especificaciones de diseño.\n•	Puede involucrar pruebas eléctricas, de software, mecánicas, térmicas y de interfaz de usuario, dependiendo de la complejidad del producto.\n2. Proceso de prueba típico\n 2.1.	Configuración: La UUT se coloca en el fixture de prueba y se conecta a interfaces eléctricas, mecánicas y de software.\n2.2. Aplicación de estímulos: El sistema aplica señales de entrada, potencia, datos o comandos según la secuencia de prueba programada.\n2.3. Medición de respuestas: Se capturan las salidas eléctricas, respuestas de software, comportamientos mecánicos, etc.\n2.4. Análisis y decisión: Las respuestas se comparan con los límites aceptables definidos en las especificaciones.\n2.5. Reporte de resultados: Se genera un reporte detallado con pass/fail y datos de diagnóstico en caso de falla.\n3. Tipos comunes de pruebas funcionales\n•	Pruebas de consumo energético: Verifican que el consumo de corriente esté dentro de especificaciones.\n •	Pruebas de interfaces de comunicación: Validan protocolos como UART, I2C, SPI, USB, Ethernet, etc.\n •	Pruebas de software y firmware: Verifican la correcta ejecución de funciones programadas.\n •	Pruebas de interfaces de usuario: Validan displays, botones, LEDs, audios, etc.\n •	Pruebas de rendimiento: Miden parámetros como velocidad de procesamiento, ancho de banda, etc."
+                    },
+                     {
+                        title: "🏗️ Estructura de un Sistema FT",
+                        content: "1. Hardware principal\n•	Equipo de medición e instrumentación: Multímetros, osciloscopios, analizadores de espectro, fuentes de alimentación, etc.\n•	Fixture de prueba: Adaptador mecánico y eléctrico que interface entre el equipo de prueba y la UUT.\n•	Interfaces de estímulo y captura: Tarjetas de adquisición de datos, generadores de señal, cargas programables, etc.\n•	Controlador: Computadora industrial o PLC que orchesta la secuencia de prueba.\n2. Software especializado\n•	Entorno de desarrollo: Para crear, depurar y mantener los programas de prueba (ej: LabVIEW, TestStand, Python, C++).\n•	Secuencias de prueba: Programas específicos para cada producto que definen los pasos de prueba, estímulos y criterios de pass/fail.\n•	Sistema de reportes: Para generar resultados, estadísticas y datos para traceability.\n3. Interfaces específicas por producto\n•	Adaptadores mecánicos: Para posicionar correctamente la UUT y conectar interfaces no eléctricas.\n•	Probes y conectores: Para hacer contacto eléctrico con puntos de test en la UUT.\n•	Sistemas de visión: Para verificar displays, LEDs o componentes mecánicos."
+                    },
+                    {
+                        title: "🔑 Claves para una Integración Exitosa",
+                        content: "1. Definición clara de requisitos\n•	Establecer especificaciones de prueba detalladas basadas en los requisitos del producto y casos de uso reales.\n•	Involucrar a todas las partes interesadas (diseño, manufactura, calidad) en la definición de las pruebas.\n2. Diseño del fixture y interfaces\n•	Desarrollar fixtures robustos que aseguren repetibilidad y confiabilidad en las mediciones. \n•	Desarrollar fixtures robustos que aseguren repetibilidad y confiabilidad en las mediciones.\n3. Desarrollo de software modular y mantenible\n•	Crear arquitecturas de software escalables y reutilizables para reducir tiempo de desarrollo en futuros productos.\n•	Implementar manejo de exceptions y diagnóstico automático de fallas para facilitar troubleshooting.\n4. Validación y correlación\n•	Validar exhaustivamente el sistema de prueba contra unidades conocidas buenas y malas.\n•	Asegurar correlación entre diferentes sistemas de prueba y entre manufactura y desarrollo.\n5. Integración con sistemas de manufactura\n•	Conectar el FT con sistemas MES (Manufacturing Execution System) para traceability completa.\n•	Implementar flujos de información automáticos con estaciones de reparación y control de calidad."
+                    },
+                    {
+                        title: "🛠️ Importancia del Servicio PostVenta, Capacitación y Soporte",
+                        content: "1. Puesta en marcha y validación\n•	Instalación física y commissioning del sistema por personal.\n•	Validación in situ con unidades reales de producción para asegurar cumplimiento de especificaciones.\n2. Capacitación técnica integral\n•	Capacitación para operadores: Uso del sistema, carga de UUT, interpretación de resultados.\n•	Capacitación para ingenieros: Programación, modificación de secuencias, troubleshooting.\n•	Capacitación para mantenimiento: Mantenimiento preventivo, reemplazo de consumibles, calibración.\nSoporte técnico especializado\n•	Soporte reactivo: Resolución rápida de problemas que afecten la producción, con disponibilidad 24/7 para casos críticos.\n•	Soporte proactivo: Monitoreo remoto, actualizaciones preventivas y recomendaciones de mejora.\n•	Mantenimiento programado: Visitas periódicas para calibración, verificación de performance y actualizaciones.\n4. Actualizaciones y mejoras continuas\n•	Actualizaciones de software para añadir funcionalidades, mejorar performance o corregir issues.\n•	Adaptación del sistema a cambios en el producto o procesos de manufactura.\n•	Optimización de tiempos de ciclo y cobertura de prueba basada en datos de producción.\n5. Suministro de repuestos y consumibles\n•	Provisión de componentes críticos, interfaces, conectores y consumibles con garantía de calidad.\n•	Disponibilidad de repuestos para minimizar downtime en caso de fallas."
+                    },
+                    {
+                        title: "💼 OSDEMS CNC como Proveedor Integral",
+                        content: "OSDEMS CNC se diferencia al ofrecer una solución completa de FT que incluye:\n1. Consultoría y diseño de solución \n•	Análisis de requisitos y recomendación de la estrategia de prueba óptima para cada aplicación.\n•	Diseño de arquitectura de hardware y software balanceando performance, costo y flexibilidad.\n2. Desarrollo e integración llave en mano\n•	Diseño y fabricación de fixtures e interfaces mecánicas de alta precisión.\n•	Desarrollo de software de prueba a medida con interfaces intuitivas y sistemas de reporteo.\n•	Integración con equipos de medición e instrumentación de marcas líderes.\n3. ervicios de postventa de clase mundial\n•	Soporte local: Ingenieros especializados disponibles para resolución rápida de problemas.\n•	Planes de mantenimiento: Contratos personalizados según volumen de producción y criticidad.\n•	Capacitación certificada: Programas estructurados para todos los niveles de usuarios.\n•	Mejora continua: Análisis de datos de prueba para identificar oportunidades de optimización.\n4. Ventajas competitivas de OSDEMS CNC\n•	Expertise técnico: Conocimiento profundo en electrónica, software, mecánica y procesos de manufactura.\n•	Flexibilidad: Soluciones adaptadas a las necesidades específicas de cada cliente, desde PYMEs hasta grandes manufactureros.\n•	Compromiso con la calidad: Sistemas que cumplen con los más altos estándares industriales y normativas aplicables.\n•	Partnership a largo plazo: Relaciones basadas en confianza y resultados, no solo en transacciones comerciales."
+                    },
+                    {
+                        title: "📋 Conclusión",
+                        content: "La implementación de un sistema Functional Test efectivo es un elemento crítico para asegurar la calidad, funcionalidad y confiabilidad de productos electrónicos complejos. Más que una simple estación de prueba, el FT representa la última garantía antes de que el producto llegue al cliente final.\n OSDEMS CNC se posiciona como un socio estratégico que provee soluciones integrales de FT, acompañando a sus clientes desde el diseño de la estrategia de prueba hasta la operación diaria y mejora continua del sistema. Nuestro enfoque en servicio postventa, capacitación y soporte técnico asegura que los sistemas de prueba no solo se instalen correctamente sino que mantengan su efectividad a lo largo del tiempo, maximizando el retorno de inversión y minimizando el riesgo de calidad para nuestros clientes.\n Para más información sobre cómo podemos implementar una solución de Functional Test en su línea de producción, visite osdemscnc.com o contacte a nuestro equipo de especialistas. "
                     }
                 ]
             }
@@ -90,23 +110,43 @@ const ArticleDetail = () => {
             image: "/Automatizacion.jpg",
             color: "#20b9db",
             content: {
-                introduction: "La automatización industrial y médica representa el futuro de la manufactura de precisión, integrando tecnologías avanzadas para mejorar eficiencia, calidad y seguridad.",
+                introduction: "Automatización Industrial y Médica",
                 sections: [
                     {
-                        title: "Automatización Industrial",
-                        content: "Implementamos sistemas automatizados que optimizan procesos de manufactura, reducen errores humanos y aumentan la productividad en entornos industriales complejos."
+                        title: "🔍 Índice",
+                        content: "1. Introducción a la Automatización\n2. Importancia Estratégica\n 3. Funcionamiento y Estructura de Sistemas Clave\n 4. Claves para Integración Exitosa\n 5. Aplicaciones Industriales vs. Médicas\n 6. Servicio PostVenta y Soporte: Factor Crítico\n 7. OSDEMS CNC como Proveedor Integral"
                     },
                     {
-                        title: "Automatización Médica",
-                        content: "Desarrollamos soluciones especializadas para la industria médica, cumpliendo con estrictos estándares de calidad y regulaciones para dispositivos médicos críticos."
+                        title: "📌 Introducción a la Automatización",
+                        content: "La automatización industrial y médica representa la evolución tecnológica que integra sistemas mecánicos, electrónicos y de software para realizar operaciones con mínima intervención humana. OSDEMS CNC (osdemscnc.com) se especializa en el diseño, implementación y soporte de soluciones de automatización personalizadas para sectores industriales y médicos, optimizando procesos críticos con enfoque en precisión, confiabilidad y trazabilidad."
                     },
                     {
-                        title: "Tecnologías Integradas",
-                        content: "Utilizamos robótica avanzada, sistemas de visión artificial, control de calidad automatizado y software de gestión integral para crear soluciones completas."
+                        title: "💡 Importancia Estratégica de la Automatización",
+                        content: "1. Eficiencia Operativa y Productividad\n•	Reducción de tiempos de ciclo mediante flujos continuos y sincronizados.\n•	Minimización de errores humanos en operaciones repetitivas o de alta precisión.\n•	Optimización de recursos (mano de obra, energía, materiales) a través de control adaptativo.\n2. Calidad y Trazabilidad\n•	Consistencia en outputs mediante parámetros controlados y repetibles.\n•	Registro automático de datos (lotes, serial numbers, mediciones) para cumplimiento normativo.\n•	Detección temprana de desviaciones con sistemas de inspección in-line.\n3. Seguridad y Ergonomía\n•	Reducción de riesgos laborales en operaciones peligrosas (manejo de químicos, cargas pesadas).\n•	Ambientes controlados para procesos críticos (salas limpias, atmósferas inertes.\nEscalabilidad y Flexibilidad\n•	Sistemas modulares que adaptan capacidad según demanda.\n•	Reconfiguración rápida para cambios de producto o volúmenes."
                     },
                     {
-                        title: "Ventajas Competitivas",
-                        content: "• Precisión extrema en procesos\n• Reducción de costos operativos\n• Mejora en seguridad laboral\n• Trazabilidad completa\n• Cumplimiento regulatorio automático"
+                        title: "",
+                        content: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                    },
+                    {
+                        title: "",
+                        content: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                    },
+                    {
+                        title: "",
+                        content: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                    },
+                    {
+                        title: "",
+                        content: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                    },
+                    {
+                        title: "",
+                        content: ""
+                    },
+                    {
+                        title: "",
+                        content: ""
                     }
                 ]
             }
