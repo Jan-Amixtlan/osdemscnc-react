@@ -26,7 +26,7 @@ const ArticleDetail = () => {
                     },
                     {
                         title: "Importancia del ICT en la Manufactura Electrónica",
-                        content: "1. Detección temprana de defectos \n •	Identifica fallas en componentes (resistencias, capacitores, integrados) y errores de ensamblaje (cortocircuitos, soldaduras frías) antes de que lleguen a etapas posteriores de producción . \n •	Reduce los costos de retrabajo y scrap al detectar problemas en fases iniciales del proceso ."
+                        content: "1. Detección temprana de defectos \n •	Identifica fallas en componentes (resistencias, capacitores, integrados) y errores de ensamblaje (cortocircuitos, soldaduras frías) antes de que lleguen a etapas posteriores de producción . \n •	Reduce los costos de retrabajo y scrap al detectar problemas en fases iniciales del proceso. \n 2.Garantía de calidad y confiabilidad \n •	Asegura que cada PCB cumpla con las especificaciones técnicas y estándares de calidad requeridos. \n •	Mejora la confiabilidad del producto final, especialmente crítico en industrias como automotriz, aeronáutica y médica.  "
                     },
                     {
                         title: "Proceso de Implementación",
