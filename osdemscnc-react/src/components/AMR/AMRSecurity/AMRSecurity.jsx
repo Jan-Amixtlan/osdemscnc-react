@@ -93,12 +93,7 @@ const AMRSecurity = () => {
                   <p>Expected path: /Video.mp4</p>
                 </div>
               )}
-              <div className={styles.videoOverlay}>
-                <div className={styles.overlayText}>
-                  <h3>Advanced Security Technology</h3>
-                  <p>Intelligent navigation and obstacle detection systems</p>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
