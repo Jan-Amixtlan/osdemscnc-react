@@ -228,23 +228,35 @@ const ArticleDetail = () => {
             image: "/AMR.jpg",
             color: "#1e40af",
             content: {
-                introduction: "Los Autonomous Mobile Robots (AMRs) están revolucionando la logística y manufactura modernas, ofreciendo soluciones flexibles y eficientes para el transporte y manejo de materiales.",
+                introduction: "¿Por Qué los AMRs Son Clave Hoy?",
                 sections: [
                     {
-                        title: "Evolución de la Robótica Móvil",
-                        content: "Los AMRs representan la nueva generación de robots móviles autónomos que pueden navegar de forma inteligente en entornos dinámicos sin infraestructura fija."
+                        title: "Revoluciona Tu Operación con AMRs: OSDEMS CNC como Tu Partner Estratégico",
+                        content: "<strong>¡Imagina una Fábrica que Piensa, Decide y Actúa por Sí Misma!</strong>\n\nLos Autonomous Mobile Robots (AMRs) no son solo robots: son sistemas inteligentes que transforman flujos logísticos, optimizan desplazamientos y liberan a tu equipo para actividades de alto valor. En OSDEMS CNC, no vendemos tecnología; construimos ecosistemas autónomos que impulsan tu rentabilidad y competitividad."
                     },
                     {
-                        title: "Aplicaciones Industriales",
-                        content: "Desde el transporte de materiales hasta la inspección automatizada, los AMRs se adaptan a múltiples procesos industriales mejorando la eficiencia operativa."
+                        title: "📈 ¿Por Qué los AMRs Son Clave Hoy?",
+                        content: "1.  Optimización de Tiempos y Desplazamientos\n •	Navegación inteligente: Evitan obstáculos en tiempo real, recalculando rutas al instante.\n •	Flujos continuos: Transportan materiales sin pausas, 24/7, reduciendo tiempos de ciclo en hasta un 40%.\n •	Integración con sistemas existentes: Se comunican con ERP/MES para priorizar tareas críticas.\n 2. Beneficios Tangibles e Inmediatos\n •	Reducción de costos operativos: Hasta 30% en logística interna vs. métodos tradicionales.\n •	Precisión del 99.9%: Cero errores en tracking de inventarios y entregas.\n •	Escalabilidad: Agrega más AMRs en horas, sin parar operaciones.\n 3. ROI Acelerado y Comprobado\n •	Retorno en <12 meses: Casos reales en manufactura automotriz y médica.\n •	Ahorros en mano de obra: Reasignación de personal a roles estratégicos.\n •	Trazabilidad total: Datos en tiempo real para decisiones basadas en analytics."
                     },
                     {
-                        title: "Tecnología de Navegación",
-                        content: "Equipados con sensores LiDAR, cámaras y algoritmos de IA, los AMRs pueden mapear, planificar rutas y evitar obstáculos de forma autónoma."
+                        title: "⚙️ Implementación con OSDEMS CNC: Sin Dolor, Máximo Impacto",
+                        content: "Fases de Integración Sólida\n 1. Auditoría 360°: Analizamos tus flujos, cuellos de botella y oportunidades.\n 2. Diseño Personalizado: Configuramos AMRs para tus necesidades exactas (carga, velocidad, rutas).\n 3.	Despliegue Ágil: Instalación en <4 semanas con mínima disrupción.\n 4.	Capacitación Intensiva: Tus equipos dominan la tecnología desde el día 1."
                     },
                     {
-                        title: "Impacto en la Industria",
-                        content: "• Flexibilidad operativa total\n• Reducción de costos logísticos\n• Mejora en seguridad laboral\n• Escalabilidad según demanda\n• Integración con sistemas existentes"
+                        title: "🛠️ Servicio PostVenta: Tu Éxito es Nuestra Prioridad",
+                        content: "Soporte que Marca la Diferencia\n •	Monitorización proactiva 24/7: Predecimos fallas antes de que ocurran.\n •	Actualizaciones remotas: Mejoras continuas sin detener tus operaciones.\n •	Repuestos en <24h: Acuerdos de respuesta rápida para minimizar downtime.\n Capacitación que Empodera\n •	Programas certificados: Operadores, técnicos e ingenieros.\n •	Simuladores virtuales: Practica sin riesgo en entornos digitales.\n •	Sesiones de refresco: Mantenemos a tus equipos en la vanguardia."
+                    },
+                    {
+                        title: "🤝 Por Qué Elegir a OSDEMS CNC como Tu Partner",
+                        content: "| Ventaja Competitiva | Impacto en Tu Operación |\n|---------------------|-------------------------|\n| **Soluciones llave en mano** | Integración total con tus procesos existentes. |\n| **Expertise técnico profundo** | Soporte de ingenieros con 10+ años en AMRs. |\n| **Alianzas con fabricantes top** | Acceso a tecnología de punta con mejores precios. |\n| **Compromiso de ROI garantizado** | Contratos basados en resultados medibles. |"
+                    },
+                    {
+                        title: "💡 Caso de Éxito: Transformación en Industria Médica",
+                        content: "Cliente: Fabricante de dispositivos médicos en Guadalajara.\n Desafío: Trazabilidad de componentes estériles y entregas urgentes.\n Solución AMR de OSDEMS CNC:\n •	3 AMRs para transporte de materiales entre limpieza, ensamble y almacén.\n •	Integración con SAP para priorización automática de órdenes.\n Resultados en 6 meses:\n •	✅ 35% más rápido en flujos logísticos.\n •	✅ Cero errores en entregas críticas.\n •	✅ ROI de 14 meses."
+                    },
+                    {
+                        title: "🎯 Invitación a una Alianza Estratégica",
+                        content: "No vendemos robots; construimos ventajas competitivas. En OSDEMS CNC, nos apasiona impulsar negocios como el tuyo hacia la autonomía total y eficiencia máxima.\n •	Agenda una demo personalizada: Simularemos tus operaciones con AMRs en tiempo real.\n •	Caso de negocio gratuito: Te entregamos un ROI proyectado con datos reales.\n •	Soporte lifelong: Seremos parte de tu evolución, no solo un proveedor.\n ✨ El Futuro es Autónomo. Comencemos a Construirlo Hoy.\n Contacta a nuestro equipo de especialistas:\n 🌐 osdemscnc.com\n 📧 contact@osdemscnc.com\n 📞 +52 (33) 1822 4312\n #InnovaciónQueMueveTuNegocio #AutonomíaInteligente #PartnershipOSDEMS\n La automatización no es reemplazar humanos; es potenciarlos con superherramientas. \n  — Equipo OSDEMS CNC"
                     }
                 ]
             }
@@ -332,7 +344,7 @@ const ArticleDetail = () => {
                                         item.type === 'table' ? (
                                             <div key={pIndex} dangerouslySetInnerHTML={{ __html: item.content }} />
                                         ) : (
-                                            <p key={pIndex}>{item.content}</p>
+                                            <p key={pIndex} dangerouslySetInnerHTML={{ __html: item.content }}></p>
                                         )
                                     ))}
                                 </div>
