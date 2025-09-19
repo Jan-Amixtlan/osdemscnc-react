@@ -39,7 +39,7 @@ const EvidenceSection = () => {
             id: 4,
             title: "¿Por Qué los AMRs Son Clave Hoy?",
             year: "2025",
-            image: "/AMR.jpg",
+            image: "/AMR2.avif",
             category: "AMRs",
             color: "#1e40af",
             gradient: "from-blue-700 to-blue-500"
