@@ -289,6 +289,14 @@ const ArticleDetail = () => {
                     {
                         title: "🛠️ Servicio PostVenta, Capacitación y Soporte: La Ventaja OSDEMS CNC",
                         content: "1. Soporte Técnico Especializado 24/7\n •	Diagnóstico remoto: Para troubleshooting en tiempo real. \n •	Respuesta in situ: En <24h para emergencias críticas.\n 2. Capacitación Certificada\n •	Programas para técnicos: Mantenimiento preventivo, reemplazo de componentes.\n •	Entrenamiento para ingenieros: Optimización de parámetros, interpretación de datos. \n 3. Mejora Continua y Actualizaciones\n •	Retrofitting: Modernización de fixturas obsoletas con nuevas tecnologías.\n •	Software updates: Para integración con nuevos equipos de prueba.\n 4. Suministro de Consumibles y Repuestos\n •	Puntas de prueba (nails): Stock permanente de múltiples geometrías (pogo pins, crown tips).\n •	Kits de mantenimiento: Sellos, resortes, conectores."
+                    },
+                    {
+                        title: "🚀 OSDEMS CNC: Tu Socio en Excelencia Operativa",
+                        content:"1. Consultoría Técnica Profunda\n •	Análisis DFT (Design for Test): Asesoramos en diseño de PCBs para maximizar cobertura de prueba.\n •	Simulación por FEA: Análisis de tensiones y térmico para predecir vida útil.\n 2. Manufactura de Precisión con Tecnología de Punta\n •	Máquinas CNC: Metrología de alta gama.\n 3. Compromiso de Desempeño Garantizado\n •	Contratos basados en KPIs: Nos alineamos a tus metas de calidad y productividad.\n 4. Ecosistema de Soluciones Integrales\n •	Desde diseño hasta mantenimiento: Single-source responsibility para simplificar tu operación.\n •	Integración con sistemas ICT: De marcas como Spea, Testronics, Takaya."
+                    },
+                    {
+                        title: "💎 Conclusión: Más que un Proveedor, un Partner de Confianza",
+                        content:"Una fixtura ICT no es un gasto; es una inversión estratégica en calidad y eficiencia. En OSDEMS CNC, no entregamos solo hardware; entregamos confiabilidad, data accionable y soporte que nunca duerme.\n ¿Listo para llevar tus pruebas ICT al siguiente nivel?\n 👉 Contacta a nuestros especialistas hoy mismo:\n •	🌐 osdemscnc.com\n •	📧 contact@osdemscnc.com\n •	📞 +52 (33) 1822 4312\n #PrecisionThatMatters #ICTExperts #OSDEMSPartner\n La calidad se construye desde el diseño y se valida en cada detalle. — Equipo OSDEMS CNC"
                     }
                 ]
             }
