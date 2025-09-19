@@ -262,29 +262,33 @@ const ArticleDetail = () => {
             }
         },
         5: {
-            title: "Precisión Absoluta- El Arte y Ciencia detrás de las Fixturas ICT",
+            title: "Precisión Absoluta: El Arte y Ciencia detrás de las Fixturas ICT",
             category: "Precisión",
             year: "2025",
             image: "/Fixturas.jpg",
             color: "#f59e0b",
             content: {
-                introduction: "Las fixturas ICT representan la culminación de ingeniería de precisión, combinando diseño mecánico avanzado con tecnología electrónica para crear herramientas de testing ultra-precisas.",
+                introduction: "Precisión Absoluta: El Arte y Ciencia detrás de las Fixturas ICT ",
                 sections: [
                     {
-                        title: "Ingeniería de Precisión",
-                        content: "Cada fixture ICT es diseñada con tolerancias micrométricas, utilizando materiales de alta calidad y procesos de manufactura de precisión extrema."
+                        title: "🔍 Introducción: Donde la Ingeniería de Precisión Encuentra la Excelencia Operativa",
+                        content: "En el mundo de las pruebas electrónicas, la fixtura para ICT (In-Circuit Test) no es solo un accesorio; es el puente crítico entre el diseño teórico y la calidad real. En OSDEMS CNC (osdemscnc.com), fusionamos diseño innovador, manufactura de precisión y soporte técnico superior para entregar fixturas que no solo cumplen especificaciones, sino que redefinen los estándares de confiabilidad y eficiencia."
                     },
                     {
-                        title: "Diseño y Desarrollo",
-                        content: "Nuestro proceso incluye análisis CAD/CAM avanzado, simulación de contactos, optimización térmica y validación exhaustiva antes de la producción."
+                        title: "💡 La Importancia Crítica del Diseño de una Fixtura para ICT",
+                        content: "1. Precisión en la Interfaz Eléctrica\n •	Contacto perfecto: Cada punta de prueba (bed of nails) debe alinearse con ±0.05 mm de tolerancia para evitar falsos contactos o daños en PCBs.\n •	Impedancia controlada: Diseño de trazas y materiales que minimizan interferencias en señales de alta frecuencia.\n 2. Diseño Mecánico Robusto.\n •	Estabilidad dimensional: Materiales como aluminio 6061-T6 o acero inoxidable para evitar deformaciones por estrés térmico o mecánico. \n •	Mecanismos de sujeción: Sistemas neumáticos o manuales que aseguran presión uniforme sin dañar la PCB.\n 3. Optimización para Manufactura y Mantenimiento\n •	Modularidad: Diseños que permiten reemplazo rápido de puntas dañadas o adaptadores para nuevas PCBs.\n •	Accesibilidad: Facilitan limpieza y mantenimiento preventivo, reduciendo downtime. \n 4. Integración con Sistemas de Prueba\n •	Conectores de alta densidad: Interfaces como D-Sub, HDMM® o customizados para señalización libre de ruido.\n •	Compatibilidad: Con equipos de prueba líderes (Teradyne, Keysight, etc.)."
                     },
                     {
-                        title: "Materiales y Tecnologías",
-                        content: "Empleamos aleaciones especiales, contactos de alta conductividad, sistemas de guiado de precisión y tecnologías de manufactura CNC avanzadas."
+                        title: "⚙️ Corte y Ensamble CNC: La Columna Vertebral de la Calidad",
+                        content: "1. Precisión en Manufactura Sustractiva\n •	Máquinas CNC de 5 ejes: Para geometrías complejas en bases de fixturas con tolerancias de ±0.01 mm.\n •	Acabados superficiales: Mecanizado de alta velocidad (HSM) para superficies críticas con Ra < 0.8 µm. \n 2. Selección de Materiales de Grado Ingenieril\n•	Plásticos de alto rendimiento: PEEK, Ultem® para aislación térmica y eléctrica.\n •	Aleaciones metálicas: Aluminio 7075 para lightweight rigidity, acero inox 303 para durabilidad.\n 3. Control de Calidad In-Situ\n •	CMMs (Coordinate Measuring Machines): Verificación dimensional post-mecanizado.\n •	Inspección por visión artificial: Para validar alineación de orificios y componentes.\n 4. Ensamble Libre de Errores\n •	Jigs y fixtures personalizados: Para asegurar alineación perfecta durante ensamble. \n •	Torque controlado: Atornillado crítico con herramientas calibradas. "
                     },
                     {
-                        title: "Ventajas Técnicas",
-                        content: "• Repetibilidad extrema\n• Durabilidad excepcional\n• Contacto eléctrico perfecto\n• Mantenimiento mínimo\n• Adaptabilidad a nuevos diseños"
+                        title: "📊 Impacto Directo en Performance y ROI",
+                        content: "| Variable | Sin Fixtura Optimizada | Con Fixtura OSDEMS CNC | Impacto |\n|----------|------------------------|------------------------|----------|\n| **Tasa de Detección** | 85-90% | 99.95% | ✅ Reducción de escapes costosos |\n| **Tiempo de Ciclo** | 30-60 segundos | 8-15 segundos | ✅ Hasta 4x más throughput |\n| **Downtime por Mantenimiento** | 15-20% mensual | <5% mensual | ✅ Mayor disponibilidad |\n| **Vida Útil** | 50,000-100,000 ciclos | 200,000-500,000+ ciclos | ✅ Menor costo por ciclo |"
+                    },
+                    {
+                        title: "🛠️ Servicio PostVenta, Capacitación y Soporte: La Ventaja OSDEMS CNC",
+                        content: "1. Soporte Técnico Especializado 24/7\n •	Diagnóstico remoto: Para troubleshooting en tiempo real. \n •	Respuesta in situ: En <24h para emergencias críticas.\n 2. Capacitación Certificada\n •	Programas para técnicos: Mantenimiento preventivo, reemplazo de componentes.\n •	Entrenamiento para ingenieros: Optimización de parámetros, interpretación de datos. \n 3. Mejora Continua y Actualizaciones\n •	Retrofitting: Modernización de fixturas obsoletas con nuevas tecnologías.\n •	Software updates: Para integración con nuevos equipos de prueba.\n 4. Suministro de Consumibles y Repuestos\n •	Puntas de prueba (nails): Stock permanente de múltiples geometrías (pogo pins, crown tips).\n •	Kits de mantenimiento: Sellos, resortes, conectores."
                     }
                 ]
             }
